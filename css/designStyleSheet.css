@@ -45,6 +45,7 @@ footer{
 .time{
     float: right;
     padding-right: 10px;
+    font-size: large;
 }
 
 h2{
