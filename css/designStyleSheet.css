@@ -1,8 +1,32 @@
 body{
-    background-color: gainsboro;
+    background-color: antiquewhite;
 }
 
 .middle{
     background-color: burlywood;
     opacity: 0.95;
+}
+
+
+#mainTitle{
+    padding-left: 20px;
+    color: snow;
+    background-color: #333333;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+#fotoIcon{
+    padding-right: 15px;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: snow;
+    background-color: #333333;
+    text-align: center;
 }
