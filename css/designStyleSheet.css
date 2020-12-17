@@ -7,8 +7,19 @@ body{
     opacity: 0.95;
 }
 
+.noStyle{
+    text-decoration: none;
+    color: snow;
+}
 
-#mainTitle{
+.noStyle:hover{
+    text-decoration: none;
+    color: snow;
+    cursor: pointer;
+}
+
+.mainTitle{
+    list-style: none;
     padding-left: 20px;
     color: snow;
     background-color: #333333;
@@ -30,3 +41,4 @@ footer{
     background-color: #333333;
     text-align: center;
 }
+
