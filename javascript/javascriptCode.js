@@ -51,3 +51,22 @@ setInterval(function(){
     console.log(datetime);
     document.getElementById("time").innerHTML = datetime;}, 1000);
 
+
+document.getElementById("eGame").addEventListener('mousemove', function (){
+   document.getElementById("stiloImg").style.display = "block";
+});
+document.getElementById("eGame").addEventListener('mouseleave', function (){
+    document.getElementById("stiloImg").style.display = "none";
+});
+document.getElementById("lGame").addEventListener('mousemove', function (){
+    document.getElementById("transformersImg").style.display = "block";
+});
+document.getElementById("lGame").addEventListener('mouseleave', function (){
+    document.getElementById("transformersImg").style.display = "none";
+});
+document.getElementById("pGame").addEventListener('mousemove', function (){
+    document.getElementById("peterRigo").style.display = "block";
+});
+document.getElementById("pGame").addEventListener('mouseleave', function (){
+    document.getElementById("peterRigo").style.display = "none";
+});

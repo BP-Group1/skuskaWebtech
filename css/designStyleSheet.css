@@ -53,3 +53,24 @@ h2{
 }
 
 
+.imageShow{
+    width: 1024px;
+    height: 768px;
+    position: relative;
+    margin: auto auto auto auto;
+}
+
+.stilo{
+    display: none;
+    text-align: center;
+}
+
+.transformers{
+    display: none;
+    text-align: center;
+}
+
+.peterImage{
+    display: none;
+    text-align: center;
+}
