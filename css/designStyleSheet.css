@@ -27,6 +27,7 @@ body{
     padding-bottom: 10px;
     left: 0;
     right: 0;
+    height: 65px;
 }
 
 #fotoIcon{
@@ -43,6 +44,11 @@ footer{
 }
 .time{
     float: right;
+    padding-right: 10px;
+}
+
+h2{
+    float: left;
 }
 
 
