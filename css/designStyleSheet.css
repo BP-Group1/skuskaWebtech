@@ -30,9 +30,7 @@ body{
     height: 65px;   /* 100 pre sviatok */
 }
 
-#fotoIcon{
-    padding-right: 15px;
-}
+
 
 footer{
     width: 100%;
@@ -53,6 +51,7 @@ footer{
 }
 
 h2{
+    padding-left: 50px;
     float: left;
 }
 
