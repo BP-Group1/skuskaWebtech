@@ -51,16 +51,17 @@ footer{
     display: none;
     float: left;
 }
+
 h2{
     float: left;
 }
 
-
-
 .smImgDiv{
-    float: left;
+    z-index: 1;
+    position: absolute;
+    top: 120px;
     width: auto;
-    height: 505px;
+    height: 305px;
     /*background-color: azure;*/
     text-align: center;
     display: none;
@@ -71,11 +72,11 @@ h2{
 }
 
 .smImg{
-    width: auto;
-    height: 500px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
     z-index: 1;
-    border: 4px solid dimgray;
+    border: 6px solid dimgray;
     border-radius: 6px;
 }
 
