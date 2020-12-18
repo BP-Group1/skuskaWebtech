@@ -27,7 +27,7 @@ body{
     padding-bottom: 10px;
     left: 0;
     right: 0;
-    height: 65px;
+    height: 65px;   /* 100 pre sviatok */
 }
 
 #fotoIcon{
@@ -42,19 +42,22 @@ footer{
     background-color: #333333;
     text-align: center;
 }
-.time{
+.time,#nameDay,#time{
     float: right;
     padding-right: 10px;
     font-size: medium;
 }
-
+#feastDay{
+    display: none;
+    float: left;
+}
 h2{
     float: left;
 }
 
 
 .imageShow{
-    width: 1024px;
+    width: auto;
     height: 768px;
     position: relative;
     margin: auto auto auto auto;
@@ -73,4 +76,26 @@ h2{
 .peterImage{
     display: none;
     text-align: center;
+}
+@media screen and (max-width: 390px){
+    #nameDay{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 310px){
+    h2,.time,#feastDay,#time{
+        font-size: 12px;
+    }
+    #nameDay{
+        font-size: 7px;
+    }
+}
+
+.wrapper{
+    min-width: 240px;
+}
+.name{
+    color: red;
+
+
 }

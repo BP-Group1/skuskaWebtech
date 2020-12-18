@@ -15,102 +15,103 @@
 
 </head>
 <body>
+    <div class="wrapper">
+        <header>
+                <div class="mainTitle">
+                    <h2>
+                        <a class="noStyle" href="https://github.com/BP-Group1/skuskaWebtech.git" target="_blank">
+                            <img src="../img/icons/logo3.png" alt="logo" id="fotoIcon">
+                            <b>Skúška</b>
+                            <br>
+                            <b id="feastDay">       </b>
+                        </a>
+                    </h2>   <!-- logo má viac verzii logo1/logo2/logo3 ... .png -->
+                        <b id="time">                   </b>
+                        <br>
+                        <b id="nameDay"> </b>
+                </div>
+        </header>
+        <main>
 
-<header>
-        <div class="mainTitle">
-            <h2>
-                <a class="noStyle" href="https://github.com/BP-Group1/skuskaWebtech.git" target="_blank">
-                    <img src="../img/icons/logo3.png" alt="logo" id="fotoIcon">
-                    <b>Skúška</b>
-                </a>
-            </h2>   <!-- logo má viac verzii logo1/logo2/logo3 ... .png -->
+            <!-- sideBar input -->
+            <input type="checkbox" id="check" />
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <!-- sideBar input -->
 
-            <div class="time">
-                <b id="time">                </b>
-            </div>
-
-        </div>
-</header>
-<main>
-
-    <!-- sideBar input -->
-    <input type="checkbox" id="check" />
-    <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <!-- sideBar input -->
-
-    <!-- sideBar  -->
-    <div class="sidebar">
-        <header>Skúška</header>
-        <ul>
-            <li>
-                <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
+            <!-- sideBar  -->
+            <div class="sidebar">
+                <header>Skúška</header>
                 <ul>
-                    <li id="lGame">
-                        <a href="http://147.175.121.202/~xpribulal/RPRskuska/html/lukasHTML"><i class="fas fa-qrcode"></i>Lukáš hra</a>
-                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
+                        <ul>
+                            <li id="lGame">
+                                <a href="http://147.175.121.202/~xpribulal/RPRskuska/html/lukasHTML"><i class="fas fa-qrcode"></i>Lukáš hra</a>
+                            </li>
 
-                    <li id="pGame">
-                        <a href="http://147.175.121.202/~xpribulal/RPRskuska/html/peterHTML"><i class="fas fa-qrcode"></i>Peter hra</a>
-                    </li>
+                            <li id="pGame">
+                                <a href="http://147.175.121.202/~xpribulal/RPRskuska/html/peterHTML"><i class="fas fa-qrcode"></i>Peter hra</a>
+                            </li>
 
-                    <li id="eGame">
-                        <a href="http://147.175.121.202/~xpribulal/RPRskuska/html/erikHTML"><i class="fas fa-qrcode"></i>Erik hra</a>
+                            <li id="eGame">
+                                <a href="http://147.175.121.202/~xpribulal/RPRskuska/html/erikHTML"><i class="fas fa-qrcode"></i>Erik hra</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-stream"></i>Overview</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-calendar-week"></i>Events</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="far fa-question-circle"></i>About</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="far fa-envelope"></i>Contact</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-stream"></i>Overview</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-calendar-week"></i>Events</a>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-question-circle"></i>About</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-envelope"></i>Contact</a>
-            </li>
-        </ul>
+            </div>
+            <!-- sideBar  -->
+
+            <div class="container">
+
+                <div class="middle row">
+                    <div class="col-lg-6">test-bootstrap</div>
+                    <div class="col-lg-6">test-bootstrap</div>
+                </div>
+            </div>
+
+            <div class="imageShow">
+                <div class="stilo" id="stiloImg">
+                    <img src="../img/eImg/Stilo2.jpg" alt="stilo">
+                </div>
+                <div class="transformers" id="transformersImg">
+                    <img src="../img/tooltip/bumblebee.jpg" alt="transformer">
+                </div>
+                <div class="peterImage" id="peterRigo">
+                    <img src="../img/tooltip/peter_rigo.jpg" alt="peter">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <b>RPR Designer, s.r.o.</b>
+        </footer>
+
+        <!-- javaScript  -->
+        <script src="../javascript/javascriptCode.js"></script>
+        <!-- javaScript  -->
     </div>
-    <!-- sideBar  -->
-
-    <div class="container">
-
-        <div class="middle row">
-            <div class="col-lg-6">test-bootstrap</div>
-            <div class="col-lg-6">test-bootstrap</div>
-        </div>
-    </div>
-
-    <div class="imageShow">
-        <div class="stilo" id="stiloImg">
-            <img src="../img/eImg/Stilo2.jpg">
-        </div>
-        <div class="transformers" id="transformersImg">
-            <img src="../img/tooltip/bumblebee.jpg">
-        </div>
-        <div class="peterImage" id="peterRigo">
-            <img src="../img/tooltip/peter_rigo.jpg">
-        </div>
-    </div>
-</main>
-
-<footer>
-    <b>RPR Designer, s.r.o.</b>
-</footer>
-
-<!-- javaScript  -->
-<script src="../javascript/javascriptCode.js"></script>
-<!-- javaScript  -->
 </body>
 
 </html>
