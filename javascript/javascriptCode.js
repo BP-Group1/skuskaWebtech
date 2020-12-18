@@ -1,5 +1,5 @@
-let currentdate=null;
-let hodiny,minuty,sekundy;
+let currentDate=null;
+let hours,minutes,seconds;
 let datetime=null;
 // date
 updateDate()
@@ -11,9 +11,17 @@ setInterval(function(){
 
 // xml reading
 let xhttp,xmlDoc,x,input,size,SKsviatky,SK,divText,startString;
-searchXML((currentdate.getMonth()+1).toString()+currentdate.getDate().toString());
+document.getElementById("nameDay").innerHTML = searchXML((currentDate.getMonth()+1).toString()+currentDate.getDate().toString());
 //
-
+console.log(searchXML("0102",3));
+function getDate(){
+    //input name
+    //TODO
+}
+function getName(){
+    //input date
+    //TODO
+}
 function loadXMLDoc(dname)
 {
 
@@ -30,11 +38,11 @@ function loadXMLDoc(dname)
     xhttp.send();
     return xhttp.responseXML;
 }
-function searchXML(date)
+function searchXML(inp,choice)// choice 1 je dátum 2 je sviatok,3 je meno default je pre meniny na indexe
 {
     xmlDoc=loadXMLDoc("../xmlFiles/meniny.xml");
     x=xmlDoc.getElementsByTagName("zaznam");
-    input = date;
+    input = inp;
     size = input.length;
 
     if (input === "")
@@ -44,13 +52,19 @@ function searchXML(date)
     }
     for (let i=0;i<x.length;i++)
     {
-        startString = x[i].children[0].textContent;
-
+        if(choice===1){
+            startString = x[i].children[1].textContent;
+        }else{
+            startString = x[i].children[0].textContent;
+        }
         if (startString.toLowerCase() === input.toLowerCase())
         {
             if(x[i].children[1].tagName==="SKsviatky"){SKsviatky = x[i].children[1].textContent;}
             else if(x[i].children[2].tagName==="SKsviatky"){SKsviatky = x[i].children[2].textContent;}
             else if(x[i].children[3].tagName==="SKsviatky"){SKsviatky = x[i].children[3].textContent;}
+            else{
+                SKsviatky="žiadny";
+            }
             if(x[i].children[1].tagName==="SK"){
                 SK=x[i].children[1].textContent;
             }else
@@ -58,7 +72,13 @@ function searchXML(date)
                 divText = "nikto";
                 break;
             }
-            divText = SK;
+            if(choice===1){
+                divText = x[i].children[0].textContent;
+            }else if(choice===2){
+                divText = SKsviatky;
+            }else{
+                divText = SK;
+            }
             break;
         }
         else
@@ -67,54 +87,56 @@ function searchXML(date)
         }
     }
     if(divText==="nikto"){
-        document.getElementById("nameDay").innerHTML = 'Dnes nemá nikto meniny';
-    }else{
-        document.getElementById("nameDay").innerHTML = 'Meniny má <span class="name">'+divText+'</span>';
+        return 'Dnes nemá nikto meniny';
+    }else if(choice===1 || choice===2 || choice===3){
+        return divText;
     }
-
+    else{
+        return 'Meniny má <span class="name">'+divText+'</span>'
+    }
 }
 
 
-function upravaHod(currentHour){
+function updateHours(currentHour){
     if(currentHour.getHours()<10){
-        hodiny="0"+ currentHour.getHours();
+        hours="0"+ currentHour.getHours();
     }
     else {
-        hodiny = currentHour.getHours();
+        hours = currentHour.getHours();
     }
 }
-function upravaMin(currentMin){
+function updateMin(currentMin){
     if(currentMin.getMinutes()<10){
-        minuty="0"+ currentMin.getMinutes();
+        minutes="0"+ currentMin.getMinutes();
     }
     else {
-        minuty = currentMin.getMinutes();
+        minutes = currentMin.getMinutes();
     }
 }
 
-function upravaSec(currentSec){
+function updateSec(currentSec){
     if(currentSec.getSeconds()<10){
-        sekundy="0"+ currentSec.getSeconds();
+        seconds="0"+ currentSec.getSeconds();
     }
     else {
-        sekundy = currentSec.getSeconds();
+        seconds = currentSec.getSeconds();
     }
 }
 
 
 function updateDate(){
-    currentdate = new Date();
+    currentDate = new Date();
 
-    upravaHod(currentdate)
-    upravaMin(currentdate)
-    upravaSec(currentdate)
+    updateHours(currentDate)
+    updateMin(currentDate)
+    updateSec(currentDate)
 
-    datetime = currentdate.getDate() + "/"
-        + (currentdate.getMonth()+1)  + "/"
-        + currentdate.getFullYear() + "  "
-        + hodiny + ":"
-        + minuty + ":"
-        + sekundy;
+    datetime = currentDate.getDate() + "/"
+        + (currentDate.getMonth()+1)  + "/"
+        + currentDate.getFullYear() + "  "
+        + hours + ":"
+        + minutes + ":"
+        + seconds;
     console.log(datetime);
 }
 
