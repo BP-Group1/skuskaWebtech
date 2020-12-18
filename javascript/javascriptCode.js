@@ -74,10 +74,8 @@ function searchXML(date)
 
 }
 
-//,,,,,,,,,,,,
 
 function upravaHod(currentHour){
-    hodiny;
     if(currentHour.getHours()<10){
         hodiny="0"+ currentHour.getHours();
     }
@@ -86,8 +84,6 @@ function upravaHod(currentHour){
     }
 }
 function upravaMin(currentMin){
-
-    minuty;
     if(currentMin.getMinutes()<10){
         minuty="0"+ currentMin.getMinutes();
     }
@@ -97,8 +93,6 @@ function upravaMin(currentMin){
 }
 
 function upravaSec(currentSec){
-
-    sekundy;
     if(currentSec.getSeconds()<10){
         sekundy="0"+ currentSec.getSeconds();
     }
