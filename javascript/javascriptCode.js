@@ -191,7 +191,7 @@ function vytvorObrazok(zdroj,nazov,id, popis) {
     y.setAttribute("class","col-lg-4 meno");
     x.setAttribute("src", zdroj);
     x.setAttribute("alt", nazov);
-    x.setAttribute("class", "profileImage");
+    x.setAttribute("class", "col-12 profileImage");
     originalOkno(zdroj,nazov,popis)
 
     x.onclick = function(){
