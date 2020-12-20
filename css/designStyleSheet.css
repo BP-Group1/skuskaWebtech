@@ -145,3 +145,18 @@ h3{
     transition: .5s ease;
     border-radius: 100%;
 }
+
+#profilovky{
+     padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.profileImage{
+    border: 6px solid dimgray;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.profileImage:hover{
+    cursor: pointer;
+}

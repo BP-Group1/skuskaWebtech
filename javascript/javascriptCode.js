@@ -186,10 +186,12 @@ function vytvorObrazok(zdroj,nazov,id, popis) {
     var x = document.createElement("img");
     var y = document.createElement("div");
     var nadpis = document.createElement("b");
+    var riadok = document.createElement("br");
     nadpis.append(nazov);
-    y.setAttribute("class","col-lg-4 meno")
+    y.setAttribute("class","col-lg-4 meno");
     x.setAttribute("src", zdroj);
     x.setAttribute("alt", nazov);
+    x.setAttribute("class", "profileImage");
     originalOkno(zdroj,nazov,popis)
 
     x.onclick = function(){
@@ -200,7 +202,7 @@ function vytvorObrazok(zdroj,nazov,id, popis) {
 
 
     };
-    document.getElementById("profilovky").appendChild(y).appendChild(nadpis);
+    document.getElementById("profilovky").appendChild(y).appendChild(nadpis).appendChild(riadok);
     document.getElementById("profilovky").appendChild(y).appendChild(x);
 
 }
