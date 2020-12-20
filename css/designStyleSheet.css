@@ -160,3 +160,7 @@ h3{
 .profileImage:hover{
     cursor: pointer;
 }
+
+#zatvor:hover{
+    cursor: pointer;
+}
