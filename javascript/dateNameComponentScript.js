@@ -137,7 +137,7 @@ function updateDate(){
         + hours + ":"
         + minutes + ":"
         + seconds;
-    console.log(datetime);
+    //console.log(datetime);
 }
 
 //menu pomocou komponentu
@@ -156,21 +156,21 @@ class sideBar extends HTMLElement {
                 <header>Skúška</header>
                 <ul>
                     <li>
-                        <a href="index.html"><i class="fas fa-link"></i>Domov</a>
+                        <a href="/html/index.html"><i class="fas fa-link"></i>Domov</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
                         <ul>
                             <li id="lGame">
-                                <a href="lukasHTML.html"><i class="fas fa-qrcode"></i>Lukáš hra</a>
+                                <a href="/html/lukasHTML.html"><i class="fas fa-qrcode"></i>Lukáš hra</a>
                             </li>
 
                             <li id="pGame">
-                                <a href="peterHTML.html"><i class="fas fa-qrcode"></i>Peter hra</a>
+                                <a href="/html/peterHTML.html"><i class="fas fa-qrcode"></i>Peter hra</a>
                             </li>
 
                             <li id="eGame">
-                                <a href="erikHTML.html"><i class="fas fa-qrcode"></i>Erik hra</a>
+                                <a href="/html/erikHTML.html"><i class="fas fa-qrcode"></i>Erik hra</a>
                             </li>
                         </ul>
                     </li>

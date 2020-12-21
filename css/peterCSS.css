@@ -19,4 +19,14 @@
 .gamePicture{
   max-width: 100%;
   height: auto;
+}/* takto?
+.parts{
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+
+  background-image: url(../img/peterObrazok/parts/bomba.png);
+}*/
+.parts{
+  height: auto;
 }
