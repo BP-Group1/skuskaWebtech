@@ -139,3 +139,64 @@ function updateDate(){
         + seconds;
     console.log(datetime);
 }
+
+class sideBar extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <!-- sideBar input -->
+            <input type="checkbox" id="check" />
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <!-- sideBar input -->
+            <!-- sideBar  -->
+    <div class="sidebar">
+                <header>Skúška</header>
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-link"></i>Domov</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
+                        <ul>
+                            <li id="lGame">
+                                <a href="lukasHTML.html"><i class="fas fa-qrcode"></i>Lukáš hra</a>
+                            </li>
+
+                            <li id="pGame">
+                                <a href="peterHTML.html"><i class="fas fa-qrcode"></i>Peter hra</a>
+                            </li>
+
+                            <li id="eGame">
+                                <a href="erikHTML.html"><i class="fas fa-qrcode"></i>Erik hra</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-stream"></i>Overview</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-calendar-week"></i>Events</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="far fa-question-circle"></i>About</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="far fa-envelope"></i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- sideBar  -->`;
+    }
+}
+
+if (!customElements.get('side-bar')) {
+    customElements.define('side-bar', sideBar);
+}
