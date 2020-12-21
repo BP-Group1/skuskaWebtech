@@ -8,14 +8,14 @@ h1{
     border: 1px solid #aaaaaa;
     z-index: 0;
     float: inside;
-}
-#hraPozadie{
-    z-index: -1;
+    background-image: url("../img/lukasObrazok/hraPozadie.png");
 }
 
+
 #kladivoOK{
-    left: 1000px;
+    position: absolute;
+    left: 560px;
     width: 409px;
     height: 142px;
-    z-index: 2;
+
 }

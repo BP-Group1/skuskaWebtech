@@ -140,6 +140,7 @@ function updateDate(){
     console.log(datetime);
 }
 
+//menu pomocou komponentu
 class sideBar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
