@@ -1,3 +1,21 @@
 h1{
     color: red;
 }
+
+#div1 {
+    width: 1392px;
+    height: 783px;
+    border: 1px solid #aaaaaa;
+    z-index: 0;
+    float: inside;
+}
+#hraPozadie{
+    z-index: -1;
+}
+
+#kladivoOK{
+    left: 1000px;
+    width: 409px;
+    height: 142px;
+    z-index: 2;
+}
