@@ -147,7 +147,7 @@ h3{
 }
 
 #profilovky{
-     padding-bottom: 20px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 
@@ -155,6 +155,8 @@ h3{
     border: 6px solid dimgray;
     border-radius: 6px;
     margin-bottom: 20px;
+    max-height: 400px;
+    max-width: 400px;
 }
 
 .profileImage:hover{
@@ -163,4 +165,9 @@ h3{
 
 #zatvor:hover{
     cursor: pointer;
+}
+
+.obrazok{
+    max-width: 95%;
+    max-height: 95%;
 }
