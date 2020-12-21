@@ -139,7 +139,3 @@ function updateDate(){
         + seconds;
     console.log(datetime);
 }
-
-
-
-
