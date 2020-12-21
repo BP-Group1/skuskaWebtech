@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <title>Erik's HTML</title>
 
-    <link rel="icon" href="../img/icons/favicon2.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="icon" href="../img/icons/favicon2.png">
     <link rel="stylesheet" href="../css/designStyleSheet.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <script src="../javascript/erikScript.js"></script>
-    <script src="../javascript/dateNameComponentScript.js"></script>
+
+
 
     <link rel="stylesheet" href="../css/erikCSS.css">
     <link rel="stylesheet" href="../css/sideBar.css">
 
+
+
 </head>
 <body>
 
-<header>
+    <header>
     <div class="mainTitle">
         <h2>
 
@@ -36,76 +37,54 @@
     </div>
 </header>
 
-<main>
+    <side-bar></side-bar>
 
-    <!-- sideBar input -->
-    <input type="checkbox" id="check" />
-    <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <!-- sideBar input -->
-    <!-- sideBar  -->
-    <div class="sidebar">
-        <header>Skúška</header>
-        <ul>
-            <li>
-                <a href="index.html"><i class="fas fa-link"></i>Domov</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
-                <ul>
-                    <li id="lGame">
-                        <a href="lukasHTML.html"><i class="fas fa-qrcode"></i>Lukáš hra</a>
-                    </li>
+    <main>
+        <div class="hlavnyObrazok">
+            <!--<img src="../img/eImg/naDiely.png" alt="stiloNaDiely" width="1600" height="1050">-->
 
-                    <li id="pGame">
-                        <a href="peterHTML.html"><i class="fas fa-qrcode"></i>Peter hra</a>
-                    </li>
+            <div id="poziciaCelnehoSkla"><img src="../img/eImg/celneSklo.png" alt="celneSklo" height="245" width="740" class="plus1"></div>
+            <div id="poziciaMasky"><img src="../img/eImg/maska.png" alt="maska" height="91" width="404" class="plus1"></div>
+            <div id="poziciaEmblemu"><img src="../img/eImg/emblem.png" alt="emblem" height="49" width="53" class="plus1"></div>
+            <div id="poziciaSkyWindow"><img src="../img/eImg/skywindow.png" alt="skywindow" height="83" width="563" class="plus1"></div>
+            <div id="poziciaSvetiel"><img src="../img/eImg/svetla.png" alt="svetla" height="123" width="828" class="plus1"></div>
+            <div id="poziciaChladenia"><img src="../img/eImg/chladenie.png" alt="chladenie" height="152" width="828" class="plus1"></div>
+            <div id="poziciaPrednychDveri"><img src="../img/eImg/dverep.png" alt="predneDvere" height="580" width="1050" class="plus1"></div>
+            <div id="poziciaZadnychDveri"><img src="../img/eImg/dvereZadne.png" alt="zadneDvere" height="559" width="245" class="plus1"></div>
 
-                    <li id="eGame">
-                        <a href="erikHTML.html"><i class="fas fa-qrcode"></i>Erik hra</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-stream"></i>Overview</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-calendar-week"></i>Events</a>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-question-circle"></i>About</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-envelope"></i>Contact</a>
-            </li>
-        </ul>
-    </div>
-    <!-- sideBar  -->
-    <!-- tooltip Images -->
-    <div class="imageShow">
-        <div class="smImgDiv" id="stiloImg">
-            <img class="smImg" src="../img/eImg/Stilo2.jpg" alt="stilo">
+            <img src="../img/eImg/celneSklo.png" alt="celneSklo"  class="plus5">
+            <img src="../img/eImg/chladenie.png" alt="chladenie"class="plus5">
+            <img src="../img/eImg/dverep.png" alt="dverePredne"class="plus5">
+            <img src="../img/eImg/dvereZadne.png" alt="dvereZadne"class="plus5">
+            <img src="../img/eImg/maska.png" alt="maska"class="plus5">
+            <img src="../img/eImg/emblem.png" alt="emblem"class="plus5">
+            <img src="../img/eImg/skywindow.png" alt="skywindow"class="plus5">
+            <img src="../img/eImg/svetla.png" alt="svetla"class="plus5">
+
         </div>
-        <div class="smImgDiv" id="transformersImg">
-            <img class="smImg" src="../img/tooltip/bumblebee.jpg" alt="transformer">
-        </div>
-        <div class="smImgDiv" id="peterRigo">
-            <img class="smImg" src="../img/tooltip/peter_rigo.jpg" alt="peter">
-        </div>
-        <!-- tooltip Images -->
-    </div>
-</main>
+
+        <!--
+        <img src="../img/eImg/celneSklo.png" alt="celneSklo" id="celneSklo">
+        <img src="../img/eImg/chladenie.png" alt="chladenie">
+        <img src="../img/eImg/dverep.png" alt="dverePredne">
+        <img src="../img/eImg/dvereZadne.png" alt="dvereZadne">
+        <img src="../img/eImg/maska.png" alt="maska">
+        <img src="../img/eImg/emblem.png" alt="emblem">
+        <img src="../img/eImg/skywindow.png" alt="skywindow">
+        <img src="../img/eImg/svetla.png" alt="svetla">
+        -->
+
+           <!-- <img src="../img/eImg/celneSklo.png" alt="celneSklo" height="245" width="740">-->
+
+
+    </main>
 
 
 <script src="../javascript/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
+<script src="../javascript/jquery-3.5.1.min.js"></script>
+<script src="../javascript/dateNameComponentScript.js"></script>
+<script src="../javascript/erikScript.js"></script>
 </body>
 </html>
