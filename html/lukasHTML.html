@@ -7,6 +7,8 @@
     <link rel="icon" href="../img/icons/favicon2.png">
     <link rel="stylesheet" href="../css/lukasCSS.css">
     <link rel="stylesheet" href="../css/designStyleSheet.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../css/sideBar.css">
 </head>
 <body>
 <header>
@@ -15,16 +17,70 @@
             <a class="noStyle" href="https://github.com/BP-Group1/skuskaWebtech.git" target="_blank">
                 <img src="../img/icons/logo3.png" alt="logo" id="fotoIcon">
                 <b>Skúška - Lukášova stránka</b>
+                <br>
+                <b id="feastDay">       </b>
             </a>
         </h2>   <!-- logo má viac verzii logo1/logo2/logo3 ... .png -->
         <div class="time">
-            <b id="time">
-
-            </b>
+            <b id="time"></b>
+            <br>
+            <b id="nameDay"> </b>
         </div>
 
     </div>
 </header> <br>
+
+<!-- sideBar input -->
+<input type="checkbox" id="check" />
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+<!-- sideBar input -->
+<!-- sideBar  -->
+<div class="sidebar">
+    <header>Skúška</header>
+    <ul>
+        <li>
+            <a href="index.html"><i class="fas fa-link"></i>Domov</a>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
+            <ul>
+                <li id="lGame">
+                    <a href="lukasHTML.html"><i class="fas fa-qrcode"></i>Lukáš hra</a>
+                </li>
+
+                <li id="pGame">
+                    <a href="peterHTML.html"><i class="fas fa-qrcode"></i>Peter hra</a>
+                </li>
+
+                <li id="eGame">
+                    <a href="erikHTML.html"><i class="fas fa-qrcode"></i>Erik hra</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-stream"></i>Overview</a>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-calendar-week"></i>Events</a>
+        </li>
+        <li>
+            <a href="#"><i class="far fa-question-circle"></i>About</a>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
+        </li>
+        <li>
+            <a href="#"><i class="far fa-envelope"></i>Contact</a>
+        </li>
+    </ul>
+</div>
+<!-- sideBar  -->
 
 <h1>Pokus</h1>
 <img src="../img/lukasObrazok/hraObrazok.jpg" height="783" width="1392"/>
