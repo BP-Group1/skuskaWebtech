@@ -1,3 +1,91 @@
 h1{
     color: dimgray;
 }
+
+#poziciaCelnehoSkla{
+    position: absolute;
+    right: 508px;
+    top: 114px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaMasky{
+    position: absolute;
+    top: 493px;
+    left: 277px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaEmblemu{
+    position: absolute;
+    top: 513px;
+    left: 437px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaSkyWindow{
+    position: absolute;
+    top: 47px;
+    left: 635px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaSvetiel{
+    position: absolute;
+    top: 460px;
+    left: 120px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaChladenia{
+    position: absolute;
+    top: 625px;
+    left: 111px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaPrednychDveri{
+    position: absolute;
+    top: 102px;
+    left: 269px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+#poziciaZadnychDveri{
+    position: absolute;
+    top: 102px;
+    left: 1178px;
+    width: 740px;
+    height: 245px;
+    opacity: 30%;
+}
+
+.hlavnyObrazok{
+    position: relative;
+    width: 1600px;
+    height: 1050px;
+    background-image: url("../img/eImg/naDiely.png");
+    margin: auto auto auto auto;
+}
+
+.plus5{
+    z-index: 5;
+}
+
+.plus1{
+    z-index: 1;
+}
