@@ -2,18 +2,23 @@
 
 });*/
 
-function allowDrop(ev) {
+function povolPustenie(ev) {
+
     ev.preventDefault();
 }
 
-function drag(ev) {
-    ev.draggable;
-    ev.dataTransfer.setData("text", ev.target.id);
-
+function zoberObrazok(event) {
+    event.dataTransfer.setData("text", event.target.id);
 }
 
-function drop(ev) {
+function pustiObrazok(ev,id) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    var data1 = ev.dataTransfer.getData("text") + "OK";
+    console.log(data1);
+    console.log(id);
+    if (data1==id){
+        ev.target.appendChild(document.getElementById(data));
+    }
+
 }

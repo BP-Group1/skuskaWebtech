@@ -32,30 +32,32 @@
 
 <side-bar>
 </side-bar>
-
+<main>
 <h1>Transformers</h1>
 
 <!--<img src="../img/lukasObrazok/hraObrazok.jpg" height="783" width="1392"/> -->
 
 <section id="div1" >
 
-    <div id="kladivoOK" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="kladivoOK" ondrop="pustiObrazok(event,id)" ondragover="povolPustenie(event)"></div>
 </section>
 
 <div id="hraLukas">
 
-<img src="../img/lukasObrazok/kladivo.png" id="kladivo" height="142" width="409"  draggable="true" ondragstart="drag(event)"/>
-<img src="../img/lukasObrazok/rukaB.png" height="178" width="135"/>
-<img src="../img/lukasObrazok/teloB.png" height="180" width="290"/>
-<img src="../img/lukasObrazok/hlavaB.png" height="178" width="135"/>
-<img src="../img/lukasObrazok/rukaBC.png" height="235" width="182"/>
-<img src="../img/lukasObrazok/nohaB.png"  height="318" width="198"/>
-<img src="../img/lukasObrazok/rukaOP.png" height="198" width="362"/>
-<img src="../img/lukasObrazok/hlavaO.png" height="188" width="171"/>
-<img src="../img/lukasObrazok/rukaOP2.png" height="354" width="277"/>
-<img src="../img/lukasObrazok/teloOP.png"  height="341" width="391"/>
+<img src="../img/lukasObrazok/kladivo.png" id="kladivo" alt="kladivo" height="142" width="409"  draggable="true" ondragstart="zoberObrazok(event)"/>
+<img src="../img/lukasObrazok/rukaB.png" id="rukaB" alt="rukaB" height="178" width="135" draggable="true" ondragstart="zoberObrazok(event)"/>
+<img src="../img/lukasObrazok/teloB.png" alt="teloB" height="180" width="290"/>
+<img src="../img/lukasObrazok/hlavaB.png" alt="hlavaB" height="178" width="135"/>
+<img src="../img/lukasObrazok/rukaBC.png" alt="rukaBC" height="235" width="182"/>
+<img src="../img/lukasObrazok/nohaB.png"  alt="nohaB" height="318" width="198"/>
+<img src="../img/lukasObrazok/rukaOP.png" alt="rukaOP" height="198" width="362"/>
+<img src="../img/lukasObrazok/hlavaO.png" alt="hlavaO" height="188" width="171"/>
+<img src="../img/lukasObrazok/rukaOP2.png" alt="rukaOP2" height="354" width="277"/>
+<img src="../img/lukasObrazok/teloOP.png"  alt="teloOP" height="341" width="391"/>
 
 </div>
+
+</main>
 <footer>
     <b>RPR Designer, s.r.o.</b>
 </footer>
