@@ -26,13 +26,10 @@ document.getElementById("pGame").addEventListener('mouseleave', function (){
 let lastWindow, actualWindow;
 let source,name,about;
 $.getJSON("../profilePictures.json", function (json) {
-    console.log(json.profilePictures.length);
     for (let i=0; i<json.profilePictures.length; i++) {
         source = json.profilePictures[i].src;
         name = json.profilePictures[i].title;
         about = json.profilePictures[i].description;
-        console.log(source);
-        console.log(name);
         createPicture(source,name,i,about);
     }
 
@@ -40,8 +37,6 @@ $.getJSON("../profilePictures.json", function (json) {
 
 
 function createPicture(source,name,id, about) {
-    console.log(source);
-    console.log(name);
     let x = document.createElement("img");
     let y = document.createElement("div");
     let heading = document.createElement("b");
