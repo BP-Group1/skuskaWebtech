@@ -8,7 +8,8 @@ h1{
     top: 114px;
     width: 740px;
     height: 245px;
-    /*opacity: 30%;*/
+    opacity: 30%;
+    background-image: url("../img/eImg/celneSklo.png");
 }
 
 #objectCelneSklo{
@@ -18,12 +19,13 @@ h1{
 }
 
 #poziciaMasky{
+    background-image: url("../img/eImg/maska.png");
     position: absolute;
     top: 493px;
     left: 277px;
     width: 404px;
     height: 91px;
-
+    opacity: 30%;
 }
 
 #objectMaska{
@@ -33,57 +35,115 @@ h1{
 }
 
 #poziciaEmblemu{
+    background-image: url("../img/eImg/emblem.png");
     position: absolute;
     top: 513px;
     left: 437px;
-    width: 740px;
-    height: 245px;
+    width: 53px;
+    height: 49px;
+    opacity: 30%;
+}
 
+#objectEmblem{
+    background-image: url("../img/eImg/emblem.png");
+    width: 53px;
+    height: 49px;
 }
 
 #poziciaSkyWindow{
+    background-image: url("../img/eImg/skywindow.png");
     position: absolute;
     top: 47px;
     left: 635px;
-    width: 740px;
-    height: 245px;
+    width: 563px;
+    height: 83px;
+    opacity: 30%;
+}
 
+#objectSkyWindow{
+    background-image: url("../img/eImg/skywindow.png");
+    width: 563px;
+    height: 83px;
 }
 
 #poziciaSvetiel{
+    background-image: url("../img/eImg/svetla.png");
     position: absolute;
     top: 460px;
     left: 120px;
-    width: 740px;
-    height: 245px;
+    width: 828px;
+    height: 123px;
+    opacity: 30%;
+}
 
+#objectSvetla{
+    background-image: url("../img/eImg/svetla.png");
+    width: 828px;
+    height: 123px;
 }
 
 #poziciaChladenia{
+    background-image: url("../img/eImg/chladenie.png");
     position: absolute;
     top: 625px;
     left: 111px;
-    width: 740px;
-    height: 245px;
+    width: 828px;
+    height: 152px;
+    opacity: 30%;
+}
 
+#objectChladenie{
+    background-image: url("../img/eImg/chladenie.png");
+    width: 828px;
+    height: 152px;
+}
+
+#poziciaZrkadla{
+    background-image: url("../img/eImg/zrkadlo.png");
+    position: absolute;
+    top: 322px;
+    left: 269px;
+    width: 79px;
+    height: 52px;
+    opacity: 30%;
+}
+
+#objectZrkadlo{
+    background-image: url("../img/eImg/zrkadlo.png");
+    width: 79px;
+    height: 52px;
 }
 
 #poziciaPrednychDveri{
+    background-image: url("../img/eImg/dverePredne.png");
     position: absolute;
     top: 102px;
-    left: 269px;
-    width: 740px;
-    height: 245px;
+    left: 1100px;
+    width: 219px;
+    height: 580px;
+    opacity: 30%;
+}
 
+#objectPredneDvere{
+    background-image: url("../img/eImg/dverePredne.png");
+    width: 219px;
+    height: 580px;
 }
 
 #poziciaZadnychDveri{
+    background-image: url("../img/eImg/dvereZadne.png");
     position: absolute;
     top: 102px;
     left: 1178px;
-    width: 740px;
-    height: 245px;
+    width: 245px;
+    height: 559px;
+    opacity: 30%;
+}
 
+#objectDvereZadne{
+    background-image: url("../img/eImg/dvereZadne.png");
+    width: 245px;
+    height: 559px;
 }
 
 .hlavnyObrazok{
@@ -122,4 +182,9 @@ h1{
 
 .invisible{
     display: none;
+}
+
+.movable{
+    cursor: pointer;
+    float: left;
 }
