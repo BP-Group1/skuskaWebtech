@@ -11,13 +11,25 @@ h1{
     /*opacity: 30%;*/
 }
 
+#objectCelneSklo{
+    background-image: url("../img/eImg/celneSklo.png");
+    width: 740px;
+    height: 245px;
+}
+
 #poziciaMasky{
     position: absolute;
     top: 493px;
     left: 277px;
-    width: 740px;
-    height: 245px;
+    width: 404px;
+    height: 91px;
 
+}
+
+#objectMaska{
+    background-image: url("../img/eImg/maska.png");
+    width: 404px;
+    height: 91px;;
 }
 
 #poziciaEmblemu{
@@ -91,9 +103,6 @@ h1{
 }
 
 .fill{
-    background-image: url("../img/eImg/celneSklo.png");
-    height: 245px;
-    width: 740px;
     position: relative;
     cursor: pointer;
 }
