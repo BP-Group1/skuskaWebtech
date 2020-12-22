@@ -1,22 +1,39 @@
 //takto
+let draggableOptions = {
+    cancel: "a.ui-icon",
+    revert: true,
+    helper: "clone",
+    cursor: "move",
+    revertDuration: 0
+}
 
 $( function() {
-    $( ".parts").draggable();
-    $( "#picture" ).droppable();
+    $( ".parts").draggable({
+        containment: "#picture",
+        helper: "clone",
+        cursor: "move",
+        cancel: "a.ui-icon",
+        revert: "invalid",});
+    $( ".droppable" ).droppable({
+        drop: function( event, ui ) {
+            $( this )
+                .addClass( "bombCorrect" )
+                .find( "img" )
+                .html( "Dropped!" );
+        }
+    });
 } );
 let maxWidth=1186,maxHeight=672,actualWidth,actualHeight,calculateWidth,calculateHeight;
 let picture = document.getElementById("picture");
 let parts = document.getElementsByClassName("parts");
+let droppable=document.getElementsByClassName("droppable");
 actualHeight=picture.clientHeight;
 actualWidth=picture.clientWidth;
 resizeImages();
 $(window).resize(function (){
-    console.log("width:"+picture.clientWidth);
-    console.log("height:"+picture.clientHeight);
     actualHeight=picture.clientHeight;
     actualWidth=picture.clientWidth;
     resizeImages();
-
 })
 function resizeImages(){
     for(let i=0;i<parts.length;i++){
@@ -27,6 +44,11 @@ function resizeImages(){
 
         parts[i].style.width=calculateWidth+'px';
         parts[i].style.height=calculateHeight+'px';
+        if(i===0) {
+            //TODO
+            droppable[0].style.width = calculateWidth + 'px';
+            droppable[0].style.height = calculateHeight+ 'px';
+        }
     }
 }
 

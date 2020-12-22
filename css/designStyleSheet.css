@@ -24,7 +24,7 @@ body{
     color: snow;
     background-color: #333333;
     padding-top: 18px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     left: 0;
     right: 0;
     height: 65px;   /* 100 pre sviatok */
@@ -39,6 +39,7 @@ footer{
     color: snow;
     background-color: #333333;
     text-align: center;
+
 }
 .time,#nameDay,#time{
     float: right;
@@ -53,6 +54,7 @@ footer{
 h2{
     padding-left: 50px;
     float: left;
+
 }
 
 .smImgDiv{

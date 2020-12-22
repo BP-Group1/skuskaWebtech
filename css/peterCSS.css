@@ -16,6 +16,7 @@
   border-width: 7px;
   padding: 5px;
 }
+
 .gamePicture{
   max-width: 100%;
   height: auto;
@@ -29,4 +30,20 @@
 }*/
 .parts{
   height: auto;
+}
+#bombDrop{
+  width: 97px;
+  height: 87px;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 70%;
+
+}
+.bombCorrect{
+
+  //background-image: url("../img/peterObrazok/parts/bomba.png");
+}
+#parts{
+  margin-bottom: 25px;
 }
