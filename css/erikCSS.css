@@ -8,7 +8,7 @@ h1{
     top: 114px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+    /*opacity: 30%;*/
 }
 
 #poziciaMasky{
@@ -17,7 +17,7 @@ h1{
     left: 277px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 #poziciaEmblemu{
@@ -26,7 +26,7 @@ h1{
     left: 437px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 #poziciaSkyWindow{
@@ -35,7 +35,7 @@ h1{
     left: 635px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 #poziciaSvetiel{
@@ -44,7 +44,7 @@ h1{
     left: 120px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 #poziciaChladenia{
@@ -53,7 +53,7 @@ h1{
     left: 111px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 #poziciaPrednychDveri{
@@ -62,7 +62,7 @@ h1{
     left: 269px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 #poziciaZadnychDveri{
@@ -71,7 +71,7 @@ h1{
     left: 1178px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
+
 }
 
 .hlavnyObrazok{
@@ -88,4 +88,29 @@ h1{
 
 .plus1{
     z-index: 1;
+}
+
+.fill{
+    background-image: url("../img/eImg/celneSklo.png");
+    height: 245px;
+    width: 740px;
+    position: relative;
+    cursor: pointer;
+}
+
+.empty{
+    display: inline-block;
+}
+
+.hold{
+    border: solid #ccc 4px;
+}
+
+.hovered{
+    background: #f4f4f4;
+    border-style: dashed;
+}
+
+.invisible{
+    display: none;
 }
