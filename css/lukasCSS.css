@@ -1,4 +1,4 @@
-h1{
+h1 {
     color: red;
 }
 
@@ -7,15 +7,95 @@ h1{
     height: 783px;
     border: 1px solid #aaaaaa;
     z-index: 0;
-    float: inside;
+    float: none;
     background-image: url("../img/lukasObrazok/hraPozadie.png");
 }
 
 
-#kladivoOK{
+#kladivoOK {
     position: absolute;
     left: 560px;
     width: 409px;
     height: 142px;
+
+}
+
+#rukaBOK {
+    position: absolute;
+    left: 632px;
+    top: 257px;
+    width: 135px;
+    height: 178px;
+
+}
+
+#teloBOK {
+    position: absolute;
+    left: 673px;
+    top: 345px;
+    width: 290px;
+    height: 180px;
+}
+
+#hlavaBOK {
+    position: absolute;
+    left: 757px;
+    top: 275px;
+    width: 105px;
+    height: 109px;
+
+}
+
+#rukaOPOK {
+    position: absolute;
+    left: 649px;
+    top: 435px;
+    width: 362px;
+    height: 198px;
+
+}
+
+#rukaBCOK {
+    position: absolute;
+    left: 908px;
+    top: 475px;
+    width: 182px;
+    height: 235px;
+
+}
+
+#nohaBOK {
+    position: absolute;
+    left: 779px;
+    top: 571px;
+    width: 198px;
+    height: 318px;
+
+}
+
+#hlavaOOK {
+    position: absolute;
+    left: 519px;
+    top: 447px;
+    width: 171px;
+    height: 188px;
+
+}
+
+#teloOPOK {
+    position: absolute;
+    left: 497px;
+    top: 610px;
+    width: 391px;
+    height: 341px;
+
+}
+
+#rukaOP2OK {
+    position: absolute;
+    left: 305px;
+    top: 575px;
+    width: 277px;
+    height: 354px;
 
 }
