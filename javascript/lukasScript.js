@@ -14,10 +14,10 @@ function zoberObrazok(event) {
 function pustiObrazok(ev,id) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    var data1 = ev.dataTransfer.getData("text") + "OK";
-    console.log(data1);
+    var kontrolaPozicie = ev.dataTransfer.getData("text") + "OK";
+    console.log(kontrolaPozicie);
     console.log(id);
-    if (data1==id){
+    if (kontrolaPozicie==id){
         ev.target.appendChild(document.getElementById(data));
     }
 
