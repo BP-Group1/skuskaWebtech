@@ -40,19 +40,20 @@
     <side-bar></side-bar>
 
     <main>
-        <div class="hlavnyObrazok">
+        <div class="hlavnyObrazok" id="stiloCar">
             <!--<img src="../img/eImg/naDiely.png" alt="stiloNaDiely" width="1600" height="1050">-->
 
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaCelnehoSkla"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaMasky"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaEmblemu"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaSkyWindow"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaSvetiel"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaChladenia"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaZrkadla"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaZadnychDveri"></div>
-            <div class="empty" ondrop="drop(event)" ondragover="allowDrop(event)" id="poziciaPrednychDveri"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionWindow"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionFrontGrill"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionEmblem"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionSkyWindow"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionHeadLights"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionCooler"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionMirror"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionRearDoor"></div>
+            <div class="empty" ondrop="drop(event, id)" ondragover="allowDrop(event)" id="positionFrontDoor"></div>
         </div>
+
 
             <!--
             <img src="../img/eImg/chladenie.png" alt="chladenie">
@@ -64,33 +65,22 @@
             <img src="../img/eImg/svetla.png" alt="svetla">
             -->
 
-
-
-
-
         <!--<div class="movable" draggable="true" id="objectCelneSklo" ondragstart="allowDrop(event)"></div>-->
         <!--<img src="../img/eImg/celneSklo.png" draggable="true" id="objectCelneSklo" ondragstart="drag(event)" alt="aa" width="740" height="245">-->
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectCelneSklo"></div>
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectPredneDvere"></div>
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectDvereZadne"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectWindow"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectFrontDoor"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectRearDoor"></div>
         <div class="movable" draggable="true" ondragstart="drag(event)" id="objectSkyWindow"></div>
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectChladenie"></div>
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectZrkadlo"></div>
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectSvetla"></div>
-        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectMaska"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectCooler"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectMirror"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectHeadLights"></div>
+        <div class="movable" draggable="true" ondragstart="drag(event)" id="objectFrontGrill"></div>
         <div class="movable" draggable="true" ondragstart="drag(event)" id="objectEmblem"></div>
-
-
-
-
-
-
 
            <!-- <img src="../img/eImg/celneSklo.png" alt="celneSklo" height="245" width="740">-->
 
-
     </main>
-
+    <div id="congrats"><h1 id="c1" class="flagPart"></h1><h1 id="c2" class="flagPart">CONGRATULAZIONI</h1><h1 id="c3" class="flagPart"</h1></div>
 
 <script src="../javascript/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>

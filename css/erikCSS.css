@@ -2,48 +2,50 @@ h1{
     color: dimgray;
 }
 
-#poziciaCelnehoSkla{
+#positionWindow{        /*8*/
     position: absolute;
     right: 508px;
     top: 114px;
     width: 740px;
     height: 245px;
-
-    /*background-image: url("../img/eImg/celneSklo.png");*/
+    opacity: 30%;
+    background-image: url("../img/eImg/celneSklo.png");
+    z-index: 1;
 }
 
-#objectCelneSklo{
+#objectWindow{          /*6*/
     background-image: url("../img/eImg/celneSklo.png");
     width: 740px;
     height: 245px;
+    z-index: 2;
 }
 
-#poziciaMasky{
-    /*background-image: url("../img/eImg/maska.png");*/
+#positionFrontGrill{
+    background-image: url("../img/eImg/maska.png");
     position: absolute;
     top: 493px;
     left: 277px;
     width: 404px;
     height: 91px;
-
+    opacity: 30%;
     z-index: 10;
 }
 
-#objectMaska{
+#objectFrontGrill{
     background-image: url("../img/eImg/maska.png");
     width: 404px;
     height: 91px;;
     z-index: 10;
 }
 
-#poziciaEmblemu{
-    /*background-image: url("../img/eImg/emblem.png");*/
+#positionEmblem{
+    background-image: url("../img/eImg/emblem.png");
     position: absolute;
     top: 513px;
     left: 437px;
     width: 53px;
     height: 49px;
-
+    opacity: 30%;
     z-index: 11;
 }
 
@@ -54,14 +56,14 @@ h1{
     z-index: 11;
 }
 
-#poziciaSkyWindow{
-    /*background-image: url("../img/eImg/skywindow.png");*/
+#positionSkyWindow{
+    background-image: url("../img/eImg/skywindow.png");
     position: absolute;
     top: 47px;
     left: 635px;
     width: 563px;
     height: 83px;
-
+    opacity: 30%;
 }
 
 #objectSkyWindow{
@@ -70,81 +72,81 @@ h1{
     height: 83px;
 }
 
-#poziciaSvetiel{
-    /*background-image: url("../img/eImg/svetla.png");*/
+#positionHeadLights{
+    background-image: url("../img/eImg/svetla.png");
     position: absolute;
     top: 460px;
     left: 120px;
     width: 828px;
     height: 123px;
-
+    opacity: 30%;
 }
 
-#objectSvetla{
+#objectHeadLights{
     background-image: url("../img/eImg/svetla.png");
     width: 828px;
     height: 123px;
 }
 
-#poziciaChladenia{
-    /*background-image: url("../img/eImg/chladenie.png");*/
+#positionCooler{
+    background-image: url("../img/eImg/chladenie.png");
     position: absolute;
     top: 625px;
     left: 111px;
     width: 828px;
     height: 152px;
-
+    opacity: 30%;
 }
 
-#objectChladenie{
+#objectCooler{
     background-image: url("../img/eImg/chladenie.png");
     width: 828px;
     height: 152px;
 }
 
-#poziciaZrkadla{
-    /*background-image: url("../img/eImg/zrkadlo.png");*/
+#positionMirror{
+    background-image: url("../img/eImg/zrkadlo.png");
     position: absolute;
     top: 322px;
     left: 269px;
     width: 79px;
     height: 52px;
-
+    opacity: 30%;
 }
 
-#objectZrkadlo{
+#objectMirror{
     background-image: url("../img/eImg/zrkadlo.png");
     width: 79px;
     height: 52px;
 }
 
-#poziciaPrednychDveri{
-    /*background-image: url("../img/eImg/dverePredne.png");*/
+#positionFrontDoor{
+    background-image: url("../img/eImg/dverePredne.png");
     position: absolute;
     top: 102px;
     left: 1100px;
     width: 219px;
     height: 580px;
-
+    opacity: 30%;
 }
 
-#objectPredneDvere{
+#objectFrontDoor{
     background-image: url("../img/eImg/dverePredne.png");
     width: 219px;
     height: 580px;
 }
 
-#poziciaZadnychDveri{
-    /*background-image: url("../img/eImg/dvereZadne.png");*/
+#positionRearDoor{
+    background-image: url("../img/eImg/dvereZadne.png");
     position: absolute;
     top: 102px;
     left: 1178px;
     width: 245px;
     height: 559px;
-
+    opacity: 30%;
 }
 
-#objectDvereZadne{
+#objectRearDoor{
     background-image: url("../img/eImg/dvereZadne.png");
     width: 245px;
     height: 559px;
@@ -154,7 +156,7 @@ h1{
     position: relative;
     width: 1600px;
     height: 1050px;
-    background-image: url("../img/eImg/naDiely.png");
+    background-image: url("../img/eImg/naDiely3.png");
     margin: auto auto auto auto;
 }
 
@@ -171,24 +173,45 @@ h1{
     cursor: pointer;
 }
 
-.empty{
-    /*display: inline-block;*/
-}
-
-.hold{
-    border: solid #ccc 4px;
-}
-
-.hovered{
-    background: #f4f4f4;
-    border-style: dashed;
-}
-
 .invisible{
     display: none;
 }
 
 .movable{
     cursor: pointer;
+    float: left;
+}
+
+#congrats{
+    z-index: -1;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    display: none;
+
+}
+
+#c1{
+    color: snow;
+    background-color: forestgreen;
+}
+
+#c2{
+    color: #333333;
+    background-color: white;
+}
+
+#c3{
+    color: snow;
+    background-color: red;
+}
+
+.flagPart{
+    height: 1050px;
+    width: 533px;
+    text-align: center;
     float: left;
 }
