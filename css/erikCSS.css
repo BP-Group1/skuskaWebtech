@@ -19,45 +19,49 @@ h1{
 }
 
 #poziciaMasky{
-    background-image: url("../img/eImg/maska.png");
+    /*background-image: url("../img/eImg/maska.png");*/
     position: absolute;
     top: 493px;
     left: 277px;
     width: 404px;
     height: 91px;
-    opacity: 30%;
+
+    z-index: 10;
 }
 
 #objectMaska{
     background-image: url("../img/eImg/maska.png");
     width: 404px;
     height: 91px;;
+    z-index: 10;
 }
 
 #poziciaEmblemu{
-    background-image: url("../img/eImg/emblem.png");
+    /*background-image: url("../img/eImg/emblem.png");*/
     position: absolute;
     top: 513px;
     left: 437px;
     width: 53px;
     height: 49px;
-    opacity: 30%;
+
+    z-index: 11;
 }
 
 #objectEmblem{
     background-image: url("../img/eImg/emblem.png");
     width: 53px;
     height: 49px;
+    z-index: 11;
 }
 
 #poziciaSkyWindow{
-    background-image: url("../img/eImg/skywindow.png");
+    /*background-image: url("../img/eImg/skywindow.png");*/
     position: absolute;
     top: 47px;
     left: 635px;
     width: 563px;
     height: 83px;
-    opacity: 30%;
+
 }
 
 #objectSkyWindow{
@@ -67,13 +71,13 @@ h1{
 }
 
 #poziciaSvetiel{
-    background-image: url("../img/eImg/svetla.png");
+    /*background-image: url("../img/eImg/svetla.png");*/
     position: absolute;
     top: 460px;
     left: 120px;
     width: 828px;
     height: 123px;
-    opacity: 30%;
+
 }
 
 #objectSvetla{
@@ -83,13 +87,13 @@ h1{
 }
 
 #poziciaChladenia{
-    background-image: url("../img/eImg/chladenie.png");
+    /*background-image: url("../img/eImg/chladenie.png");*/
     position: absolute;
     top: 625px;
     left: 111px;
     width: 828px;
     height: 152px;
-    opacity: 30%;
+
 }
 
 #objectChladenie{
@@ -99,13 +103,13 @@ h1{
 }
 
 #poziciaZrkadla{
-    background-image: url("../img/eImg/zrkadlo.png");
+    /*background-image: url("../img/eImg/zrkadlo.png");*/
     position: absolute;
     top: 322px;
     left: 269px;
     width: 79px;
     height: 52px;
-    opacity: 30%;
+
 }
 
 #objectZrkadlo{
@@ -115,13 +119,13 @@ h1{
 }
 
 #poziciaPrednychDveri{
-    background-image: url("../img/eImg/dverePredne.png");
+    /*background-image: url("../img/eImg/dverePredne.png");*/
     position: absolute;
     top: 102px;
     left: 1100px;
     width: 219px;
     height: 580px;
-    opacity: 30%;
+
 }
 
 #objectPredneDvere{
@@ -131,13 +135,13 @@ h1{
 }
 
 #poziciaZadnychDveri{
-    background-image: url("../img/eImg/dvereZadne.png");
+    /*background-image: url("../img/eImg/dvereZadne.png");*/
     position: absolute;
     top: 102px;
     left: 1178px;
     width: 245px;
     height: 559px;
-    opacity: 30%;
+
 }
 
 #objectDvereZadne{
