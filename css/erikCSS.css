@@ -8,8 +8,8 @@ h1{
     top: 114px;
     width: 740px;
     height: 245px;
-    opacity: 30%;
-    background-image: url("../img/eImg/celneSklo.png");
+
+    /*background-image: url("../img/eImg/celneSklo.png");*/
 }
 
 #objectCelneSklo{
@@ -168,7 +168,7 @@ h1{
 }
 
 .empty{
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 .hold{

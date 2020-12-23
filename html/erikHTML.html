@@ -43,7 +43,7 @@
         <div class="hlavnyObrazok">
             <!--<img src="../img/eImg/naDiely.png" alt="stiloNaDiely" width="1600" height="1050">-->
 
-            <div class="empty" id="poziciaCelnehoSkla"></div>
+            <div class="empty" id="poziciaCelnehoSkla" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             <div class="empty" id="poziciaMasky"></div>
             <div class="empty" id="poziciaEmblemu"></div>
             <div class="empty" id="poziciaSkyWindow"></div>
@@ -68,7 +68,8 @@
 
 
 
-        <div class="movable" draggable="true" id="objectCelneSklo"></div>
+        <!--<div class="movable" draggable="true" id="objectCelneSklo" ondragstart="allowDrop(event)"></div>-->
+        <img src="../img/eImg/celneSklo.png" draggable="true" id="objectCelneSklo" ondragstart="drag(event)" alt="aa" width="740" height="245">
 
         <div class="movable" draggable="true" id="objectPredneDvere"></div>
         <div class="movable" draggable="true" id="objectDvereZadne"></div>
@@ -76,7 +77,6 @@
         <div class="movable" draggable="true" id="objectChladenie"></div>
         <div class="movable" draggable="true" id="objectZrkadlo"></div>
         <div class="movable" draggable="true" id="objectSvetla"></div>
-
         <div class="movable" draggable="true" id="objectMaska"></div>
         <div class="movable" draggable="true" id="objectEmblem"></div>
 
