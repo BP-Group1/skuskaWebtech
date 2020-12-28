@@ -14,10 +14,10 @@ document.getElementById("lGame").addEventListener('mouseleave', function (){
     document.getElementById("transformersImg").style.display = "none";
 });
 document.getElementById("pGame").addEventListener('mousemove', function (){
-    document.getElementById("peterRigo").style.display = "block";
+    document.getElementById("counterStrikeImg").style.display = "block";
 });
 document.getElementById("pGame").addEventListener('mouseleave', function (){
-    document.getElementById("peterRigo").style.display = "none";
+    document.getElementById("counterStrikeImg").style.display = "none";
 });
 
 
