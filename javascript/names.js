@@ -10,26 +10,91 @@ xhttp.open("GET", "../xmlFiles/meniny.xml", false);
 xhttp.send();
 xmlDoc = xhttp.responseXML;
 let arr = [];
+let names = [];
 let nameTag=xmlDoc.getElementsByTagName("SK");
 let name;
 let nameSplit;
 let j,i;
+let dateDiv = document.getElementById("dateDiv");
+let nameDiv = document.getElementById("namesDiv");
+let dateAfterChange;
+let inputName,inputDate;
+let choice=1;
+
+
+nameDiv.style.display="block";
+dateDiv.style.display="none";
+//nacitanie do pola
 for(i=0;i<nameTag.length;i++){
     name = nameTag[i].childNodes[0].nodeValue;
+    names.push(nameTag[i].childNodes[0].nodeValue);
     nameSplit = name.split(", ");
     if(nameSplit.length>1){
         for (j = 0; j<nameSplit.length;j++){
             arr.push(nameSplit[j]);
-
         }
     }else {
         arr.push(nameTag[i].childNodes[0].nodeValue);
     }
 }
+$('input[type=radio][name=radios]').change(function() {
+    if (this.value === 'option1') {
+        nameDiv.style.display="block";
+        dateDiv.style.display="none";
+        choice=1;
+    }
+    else if (this.value === 'option2') {
+        nameDiv.style.display="none";
+        dateDiv.style.display="block";
+        choice=2;
+    }
+});
 
 
+function afterClick(){
+    if(choice===1){
+    inputName = document.getElementById("myInput").value;
+    let firstName = inputName;
+    inputName = inputName+"";
+    for (i=0;i<names.length;i++){
+        if(names[i].includes(inputName)){
+            inputName=names[i];
+        }
+    }
+    let dateBeforeChange=searchXML(inputName,1);
+    let first,second,third,forth;
+    dateBeforeChange.split("");
+    if(dateBeforeChange[0]==="0"){
+        first="";
+    }else {
+        first=dateBeforeChange[0];
+    }
+    if(dateBeforeChange[2]==="0"){
+        third="";
+    }else {
+        third=dateBeforeChange[2];
+    }
+    second=dateBeforeChange[1]
+    forth=dateBeforeChange[3]
+    dateAfterChange = third+forth+"."+first+second+".";
+    document.getElementById("result").innerHTML = "<span class='bold'>"+firstName+"</span> má meniny "+
+        "<span class='bold'>"+dateAfterChange+"</span>";
+    }
+    else{
+        inputDate = document.getElementById("dateInput").value;
+        let date = inputDate.split("-");
+        //console.log(date[1]); mesiac
+        //console.log(date[2]); den
+        let formattedDate = date[1]+date[2];
+        let name = searchXML(formattedDate,3);
+        if(name==="Dnes nemá nikto meniny"){
+            name="nikto";
+        }
+        document.getElementById("result").innerHTML = "<span class='bold'>"+date[2]+"."+date[1]+"."+"</span> má meniny "+
+            "<span class='bold'>"+name+"</span>";
 
-
+    }
+}
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
