@@ -99,15 +99,23 @@ $('input[type=radio][name=radios2]').change(function() {
 
 
 function afterClick(){
+    let found;
     if(choice===1){
     inputName = document.getElementById("myInput").value;
     let firstName = inputName;
     inputName = inputName+"";
     for (i=0;i<names.length;i++){
-        if(names[i].includes(inputName)){
+        if(names[i].includes(inputName) && inputName.length>2){
             inputName=names[i];
+            found = 1;
         }
     }
+    if (found!==1){
+        document.getElementById("myInput").style.background="red";
+        document.getElementById("result").innerHTML = "<span class='alert'>"+'ZLÉ MENO'+"</span>";
+        return 0;
+    }
+        document.getElementById("myInput").style.background="green";
     let dateBeforeChange=searchXML(inputName,1,tag);
     let first,second,third,forth;
     dateBeforeChange.split("");
@@ -129,6 +137,12 @@ function afterClick(){
     }
     else{
         inputDate = document.getElementById("dateInput").value;
+        if (!inputDate){
+            document.getElementById("dateInput").style.background="red";
+            document.getElementById("result").innerHTML = "<span class='alert'>"+'ZLÝ DÁTUM'+"</span>";
+            return 0;
+        }
+        document.getElementById("dateInput").style.background="green";
         let date = inputDate.split("-");
         //console.log(date[1]); mesiac
         //console.log(date[2]); den

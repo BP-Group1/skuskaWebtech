@@ -54,3 +54,6 @@ input[type=submit] {
 #result{
     margin-top: 20px;
 }
+.alert{
+    background: red;
+}
