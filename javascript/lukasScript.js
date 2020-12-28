@@ -69,3 +69,21 @@ function pocitajCas(){
     spustene = setTimeout('pocitajCas();',1000)
 }
 
+document.getElementById("eGame").addEventListener('mousemove', function (){
+    document.getElementById("stiloImgL").style.display = "block";
+});
+document.getElementById("eGame").addEventListener('mouseleave', function (){
+    document.getElementById("stiloImgL").style.display = "none";
+});
+document.getElementById("lGame").addEventListener('mousemove', function (){
+    document.getElementById("transformersImgL").style.display = "block";
+});
+document.getElementById("lGame").addEventListener('mouseleave', function (){
+    document.getElementById("transformersImgL").style.display = "none";
+});
+document.getElementById("pGame").addEventListener('mousemove', function (){
+    document.getElementById("counterStrikeImgL").style.display = "block";
+});
+document.getElementById("pGame").addEventListener('mouseleave', function (){
+    document.getElementById("counterStrikeImgL").style.display = "none";
+});
