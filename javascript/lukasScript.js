@@ -73,6 +73,7 @@ function pocitajCas(){
 
 function gratulacia(){
     document.getElementById("div1").style.display = "none"
+    document.getElementById("cas").style.display = "none"
     document.getElementById("div2").style.display = "block"
     document.getElementById("vyslednyCas").innerText = casDisplay;
 }

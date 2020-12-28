@@ -117,3 +117,13 @@ p{
     height: 354px;
 
 }
+
+#cas{
+    width: 100%;
+    text-align: center;
+
+}
+button{
+    width: 100%;
+    background-color: fuchsia;
+}
