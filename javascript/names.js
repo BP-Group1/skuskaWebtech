@@ -9,9 +9,12 @@ if (window.XMLHttpRequest) {
 xhttp.open("GET", "../xmlFiles/meniny.xml", false);
 xhttp.send();
 xmlDoc = xhttp.responseXML;
-let arr = [];
-let names = [];
-let nameTag=xmlDoc.getElementsByTagName("SK");
+let slovakian = [];let czechia = [];let hungary = [];let poland = [];let austria = [];
+let slovakianNames = [];let czechiaNames = [];let hungaryNames = [];let polandNames = [];let austriaNames = [];
+let skTag=xmlDoc.getElementsByTagName("SK");let czTag=xmlDoc.getElementsByTagName("CZ");
+let huTag=xmlDoc.getElementsByTagName("HU");
+let plTag=xmlDoc.getElementsByTagName("PL");let atTag=xmlDoc.getElementsByTagName("AT");
+
 let name;
 let nameSplit;
 let j,i;
@@ -22,19 +25,31 @@ let inputName,inputDate;
 let choice=1;
 
 
+
 nameDiv.style.display="block";
 dateDiv.style.display="none";
 //nacitanie do pola
-for(i=0;i<nameTag.length;i++){
-    name = nameTag[i].childNodes[0].nodeValue;
-    names.push(nameTag[i].childNodes[0].nodeValue);
-    nameSplit = name.split(", ");
-    if(nameSplit.length>1){
-        for (j = 0; j<nameSplit.length;j++){
-            arr.push(nameSplit[j]);
+loadArrays(skTag,slovakian,slovakianNames);
+loadArrays(czTag,czechia,czechiaNames);
+loadArrays(huTag,hungary,hungaryNames);
+loadArrays(atTag,austria,austriaNames);
+loadArrays(plTag,poland,polandNames);
+let tag = "SK"
+let arr=slovakian;
+let names=slovakianNames;
+autocomplete(document.getElementById("myInput"), arr);
+function loadArrays(nameTag,arr,names){
+    for(i=0;i<nameTag.length;i++){
+        name = nameTag[i].childNodes[0].nodeValue;
+        names.push(nameTag[i].childNodes[0].nodeValue);
+        nameSplit = name.split(", ");
+        if(nameSplit.length>1){
+            for (j = 0; j<nameSplit.length;j++){
+                arr.push(nameSplit[j]);
+            }
+        }else {
+            arr.push(nameTag[i].childNodes[0].nodeValue);
         }
-    }else {
-        arr.push(nameTag[i].childNodes[0].nodeValue);
     }
 }
 $('input[type=radio][name=radios]').change(function() {
@@ -49,6 +64,38 @@ $('input[type=radio][name=radios]').change(function() {
         choice=2;
     }
 });
+$('input[type=radio][name=radios2]').change(function() {
+    if (this.value === 'option1') {
+        arr=slovakian;
+        names=slovakianNames;
+        tag="SK"
+        autocomplete(document.getElementById("myInput"), arr);
+    }
+    else if (this.value === 'option2') {
+        arr=czechia;
+        names=czechiaNames;
+        tag="CZ"
+        autocomplete(document.getElementById("myInput"), arr);
+    }
+    else if (this.value === 'option3') {
+        arr=hungary;
+        names=hungaryNames;
+        tag="HU"
+        autocomplete(document.getElementById("myInput"), arr);
+    }
+    else if (this.value === 'option4') {
+        arr=poland;
+        names=polandNames;
+        tag="PL"
+        autocomplete(document.getElementById("myInput"), arr);
+    }
+    else if (this.value === 'option5') {
+        arr=austria;
+        names=austriaNames;
+        tag="AT"
+        autocomplete(document.getElementById("myInput"), arr);
+    }
+});
 
 
 function afterClick(){
@@ -61,7 +108,7 @@ function afterClick(){
             inputName=names[i];
         }
     }
-    let dateBeforeChange=searchXML(inputName,1);
+    let dateBeforeChange=searchXML(inputName,1,tag);
     let first,second,third,forth;
     dateBeforeChange.split("");
     if(dateBeforeChange[0]==="0"){
@@ -86,7 +133,7 @@ function afterClick(){
         //console.log(date[1]); mesiac
         //console.log(date[2]); den
         let formattedDate = date[1]+date[2];
-        let name = searchXML(formattedDate,3);
+        let name = searchXML(formattedDate,3,tag);
         if(name==="Dnes nemá nikto meniny"){
             name="nikto";
         }
@@ -191,4 +238,3 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
 }
-autocomplete(document.getElementById("myInput"), arr);

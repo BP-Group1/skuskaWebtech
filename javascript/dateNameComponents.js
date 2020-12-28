@@ -11,7 +11,7 @@ setInterval(function(){
 
 // xml reading
 let xhttp,xmlDoc,x,input,size,SKsviatky,SK,divText,startString;
-document.getElementById("nameDay").innerHTML = searchXML((currentDate.getMonth()+1).toString()+currentDate.getDate().toString());
+document.getElementById("nameDay").innerHTML = searchXML((currentDate.getMonth()+1).toString()+currentDate.getDate().toString(),0,"SK");
 //
 //console.log(searchXML("0102",3));
 function getDate(){
@@ -38,7 +38,7 @@ function loadXMLDoc(dname)
     xhttp.send();
     return xhttp.responseXML;
 }
-function searchXML(inp,choice)// choice 1 je dátum 2 je sviatok,3 je meno default je pre meniny na indexe
+function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno default je pre meniny na indexe
 {
     xmlDoc=loadXMLDoc("../xmlFiles/meniny.xml");
     x=xmlDoc.getElementsByTagName("zaznam");
@@ -52,9 +52,16 @@ function searchXML(inp,choice)// choice 1 je dátum 2 je sviatok,3 je meno defau
     }
     for (let i=0;i<x.length;i++)
     {
-        if(choice===1){
+        if(choice===1 && tag==="SK" ){
             startString = x[i].children[1].textContent;
-        }else{
+        }else if(choice===1 && x[i].children.length>3){
+            for(let j = 3; j<x[i].children.length;j++){
+                if(x[i].children[j].tagName===tag) {
+                    startString = x[i].children[j].textContent;
+                }
+            }
+        }
+        else{
             startString = x[i].children[0].textContent;
         }
         if (startString.toLowerCase() === input.toLowerCase())
@@ -65,15 +72,26 @@ function searchXML(inp,choice)// choice 1 je dátum 2 je sviatok,3 je meno defau
             else{
                 SKsviatky="žiadny";
             }
-            if(x[i].children[1].tagName==="SK"){
+            if(x[i].children[1].tagName===tag){
                 SK=x[i].children[1].textContent;
             }else
             {
-                divText = "nikto";
+                divText="nikto";
+                if (choice===1){
+                    divText=x[i].children[0].textContent;
+                }
+                else{
+                    for(let j = 3; j<x[i].children.length;j++){
+                        if(x[i].children[j].tagName===tag) {
+                            divText = x[i].children[j].textContent;
+                        }
+                    }
+                }
                 break;
             }
             if(choice===1){
                 divText = x[i].children[0].textContent;
+
             }else if(choice===2){
                 divText = SKsviatky;
             }else{
