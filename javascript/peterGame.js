@@ -137,3 +137,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 */
+
+document.getElementById("eGame").addEventListener('mousemove', function (){
+    document.getElementById("stiloImgP").style.display = "block";
+});
+document.getElementById("eGame").addEventListener('mouseleave', function (){
+    document.getElementById("stiloImgP").style.display = "none";
+});
+document.getElementById("lGame").addEventListener('mousemove', function (){
+    document.getElementById("transformersImgP").style.display = "block";
+});
+document.getElementById("lGame").addEventListener('mouseleave', function (){
+    document.getElementById("transformersImgP").style.display = "none";
+});
+document.getElementById("pGame").addEventListener('mousemove', function (){
+    document.getElementById("counterStrikeImgP").style.display = "block";
+});
+document.getElementById("pGame").addEventListener('mouseleave', function (){
+    document.getElementById("counterStrikeImgP").style.display = "none";
+});

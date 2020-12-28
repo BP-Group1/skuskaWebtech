@@ -42,3 +42,23 @@ function isComponentFit(position, component){
 
     return sPosition === sComponent;
 }
+
+
+document.getElementById("eGame").addEventListener('mousemove', function (){
+    document.getElementById("stiloImgE").style.display = "block";
+});
+document.getElementById("eGame").addEventListener('mouseleave', function (){
+    document.getElementById("stiloImgE").style.display = "none";
+});
+document.getElementById("lGame").addEventListener('mousemove', function (){
+    document.getElementById("transformersImgE").style.display = "block";
+});
+document.getElementById("lGame").addEventListener('mouseleave', function (){
+    document.getElementById("transformersImgE").style.display = "none";
+});
+document.getElementById("pGame").addEventListener('mousemove', function (){
+    document.getElementById("counterStrikeImgE").style.display = "block";
+});
+document.getElementById("pGame").addEventListener('mouseleave', function (){
+    document.getElementById("counterStrikeImgE").style.display = "none";
+});
