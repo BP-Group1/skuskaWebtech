@@ -178,10 +178,10 @@ class sideBar extends HTMLElement {
                         <a href="../html/nameDays.html"><i class="fas fa-calendar-week"></i>Meniny</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
+                        <a href="../html/checklist.html"><i class="fas fa-stream"></i>Práce</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-stream"></i>Overview</a>
+                        <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
                     </li>
                     <li>
                         <a href="../html/about.html"><i class="far fa-question-circle"></i>About</a>
