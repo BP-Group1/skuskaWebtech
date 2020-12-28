@@ -23,6 +23,8 @@ let nameDiv = document.getElementById("namesDiv");
 let dateAfterChange;
 let inputName,inputDate;
 let choice=1;
+let hi="čČďý"
+
 
 
 
@@ -101,14 +103,28 @@ $('input[type=radio][name=radios2]').change(function() {
 function afterClick(){
     let found;
     if(choice===1){
+        let compareString1;
+        let compareString2;
     inputName = document.getElementById("myInput").value;
-    let firstName = inputName;
+
+    let firstName;
     inputName = inputName+"";
     for (i=0;i<names.length;i++){
-        if(names[i].includes(inputName) && inputName.length>2){
-            inputName=names[i];
-            found = 1;
+        compareString1=names[i].split(",")
+        compareString2=inputName.toLocaleLowerCase();
+        compareString2=replace(compareString2);
+        for (j = 0;j<compareString1.length;j++){
+            compareString1[j]=compareString1[j].toLocaleLowerCase();
+            compareString1[j]=replace(compareString1[j]);
+
+            if(compareString1[j]===compareString2){
+                inputName=names[i];
+                firstName=names[i];
+                found = 1;
+                break;
+            }
         }
+
     }
     if (found!==1){
         document.getElementById("myInput").style.background="red";
@@ -155,6 +171,28 @@ function afterClick(){
             "<span class='bold'>"+name+"</span>";
 
     }
+}
+function replace(string){
+    string = string.replace(new RegExp(/\s/g),"");
+    string = string.replace(new RegExp(/[àáâãäå]/g),"a");
+    string = string.replace(new RegExp(/[šś]/g),"s");
+    string = string.replace(new RegExp(/[ŕř]/g),"r");
+    string = string.replace(new RegExp(/[ť]/g),"t");
+    string = string.replace(new RegExp(/[ď]/g),"d");
+    string = string.replace(new RegExp(/[ľĺ]/g),"l");
+    string = string.replace(new RegExp(/[ňń]/g),"n");
+    string = string.replace(new RegExp(/æ/g),"ae");
+    string = string.replace(new RegExp(/çčć/g),"c");
+    string = string.replace(new RegExp(/[èéêëě]/g),"e");
+    string = string.replace(new RegExp(/[ìíîï]/g),"i");
+    string = string.replace(new RegExp(/ñ/g),"n");
+    string = string.replace(new RegExp(/[òóôõö]/g),"o");
+    string = string.replace(new RegExp(/œ/g),"oe");
+    string = string.replace(new RegExp(/[ùúûü]/g),"u");
+    string = string.replace(new RegExp(/[ýÿ]/g),"y");
+    string = string.replace(new RegExp(/[žź]/g),"z");
+    string = string.replace(new RegExp(/\W/g),"");
+    return string;
 }
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,

@@ -44,7 +44,7 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
     x=xmlDoc.getElementsByTagName("zaznam");
     input = inp;
     size = input.length;
-
+    startString="";
     if (input === "")
     {
         //nenasiel sa input
@@ -54,6 +54,7 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
     {
         if(choice===1 && tag==="SK" ){
             startString = x[i].children[1].textContent;
+
         }else if(choice===1 && x[i].children.length>3){
             for(let j = 3; j<x[i].children.length;j++){
                 if(x[i].children[j].tagName===tag) {
@@ -62,10 +63,12 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
             }
         }
         else{
+
             startString = x[i].children[0].textContent;
         }
         if (startString.toLowerCase() === input.toLowerCase())
         {
+
             if(x[i].children[1].tagName==="SKsviatky"){SKsviatky = x[i].children[1].textContent;}
             else if(x[i].children[2].tagName==="SKsviatky"){SKsviatky = x[i].children[2].textContent;}
             else if(x[i].children[3].tagName==="SKsviatky"){SKsviatky = x[i].children[3].textContent;}
@@ -74,11 +77,13 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
             }
             if(x[i].children[1].tagName===tag){
                 SK=x[i].children[1].textContent;
+
             }else
             {
                 divText="nikto";
                 if (choice===1){
                     divText=x[i].children[0].textContent;
+
                 }
                 else{
                     for(let j = 3; j<x[i].children.length;j++){
@@ -87,6 +92,7 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
                         }
                     }
                 }
+                console.log(divText)
                 break;
             }
             if(choice===1){
@@ -97,6 +103,7 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
             }else{
                 divText = SK;
             }
+
             break;
         }
         else
@@ -108,6 +115,7 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
         return 'Dnes nemá nikto meniny';
     }else if(choice===1 || choice===2 || choice===3){
         return divText;
+
     }
     else{
         return 'Meniny má <span class="name">'+divText+'</span>'
