@@ -12,6 +12,23 @@ h1 {
     background-image: url("../img/lukasObrazok/hraPozadie.png");
 }
 
+#div2 {
+    width: 1392px;
+    height: 783px;
+    border: 1px solid #aaaaaa;
+    z-index: 0;
+    float: none;
+    display: none;
+    color: white;
+    text-align: center;
+    background-image: url("../img/lukasObrazok/hraObrazok.jpg");
+}
+
+p{
+    font-family: "Droid Sans";
+    font-weight: bolder;
+    font-size: xx-large;
+}
 
 #kladivoOK {
     position: absolute;
@@ -99,4 +116,14 @@ h1 {
     width: 277px;
     height: 354px;
 
+}
+
+#cas{
+    width: 100%;
+    text-align: center;
+
+}
+button{
+    width: 100%;
+    background-color: fuchsia;
 }
