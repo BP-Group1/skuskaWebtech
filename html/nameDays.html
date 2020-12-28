@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Skuska Webtech</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="icon" href="../img/icons/favicon2.png">
+    <link rel="stylesheet" href="../css/designStyleSheet.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../css/sideBar.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="mainTitle">
+            <h2>
+                <a class="noStyle" href="https://github.com/BP-Group1/skuskaWebtech.git" target="_blank">
+
+                    <b>Skúška</b>
+                    <br>
+                    <b id="feastDay">       </b>
+                </a>
+            </h2>   <!-- logo má viac verzii logo1/logo2/logo3 ... .png -->
+            <b id="time">                   </b>
+            <br>
+            <b id="nameDay"> </b>
+        </div>
+    </header>
+
+    <side-bar>
+        <!-- tu je komponent side-bar cely slide bar vymazte a napiste
+        iba tieto 2 riadky kodu do svojho html <side-bar></side-bar>-->
+
+    </side-bar>
+
+    <main>
+        <div class="container">
+            <p class="h1">Meniny</p>
+            <br>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Vyhlaďanie poďla mena
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Vyhlaďanie poďla dátumu
+                </label>
+            </div>
+            <br>
+            <label for="nameInput"> Meno
+            <input id="nameInput" class="form-control form-control-lg" type="text" placeholder="Meno" aria-label=".form-control-lg example">
+            </label>
+            <br>
+            <br>
+            <label for="dateInput"> Dátum
+            <input id="dateInput" class="form-control form-control-lg" type="date"  aria-label=".form-control-lg example">
+            </label>
+
+
+
+
+
+        </div>
+
+
+
+
+        <div class="imageShow">
+            <div class="smImgDiv" id="stiloImg">
+                <img class="smImg" src="../img/tooltip/Stilo2.jpg" alt="stilo">
+            </div>
+            <div class="smImgDiv" id="transformersImg">
+                <img class="smImg" src="../img/tooltip/bumblebee.jpg" alt="transformer">
+            </div>
+            <div class="smImgDiv" id="counterStrikeImg">
+                <img class="smImg" src="../img/tooltip/cs.jpg" alt="counterStrike">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <b>RPR Designer, s.r.o.</b>
+    </footer>
+
+    <!-- javaScript  -->
+    <script src="../javascript/jquery-3.5.1.min.js"></script>
+    <script src="../javascript/dateNameComponents.js"></script>
+    <!-- javaScript  -->
+</div>
+</body>
+
+</html>
+<!-- http://147.175.121.202/~xpribulal/RPRskuska/html/  link na server-->

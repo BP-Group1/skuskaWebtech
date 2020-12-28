@@ -13,7 +13,7 @@ setInterval(function(){
 let xhttp,xmlDoc,x,input,size,SKsviatky,SK,divText,startString;
 document.getElementById("nameDay").innerHTML = searchXML((currentDate.getMonth()+1).toString()+currentDate.getDate().toString());
 //
-console.log(searchXML("0102",3));
+//console.log(searchXML("0102",3));
 function getDate(){
     //input name
     //TODO
@@ -175,13 +175,13 @@ class sideBar extends HTMLElement {
                         </ul>
                     </li>
                     <li>
+                        <a href="../html/nameDays.html"><i class="fas fa-calendar-week"></i>Meniny</a>
+                    </li>
+                    <li>
                         <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-stream"></i>Overview</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-calendar-week"></i>Events</a>
                     </li>
                     <li>
                         <a href="#"><i class="far fa-question-circle"></i>About</a>
