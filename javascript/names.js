@@ -13,13 +13,14 @@ let arr = [];
 let nameTag=xmlDoc.getElementsByTagName("SK");
 let name;
 let nameSplit;
-for(let i=0;i<nameTag.length;i++){
+let j,i;
+for(i=0;i<nameTag.length;i++){
     name = nameTag[i].childNodes[0].nodeValue;
-    nameSplit = name.split(",");
-    console.log(nameSplit);
+    nameSplit = name.split(", ");
     if(nameSplit.length>1){
-        for (let j = 0; j<nameSplit.length;j++){
+        for (j = 0; j<nameSplit.length;j++){
             arr.push(nameSplit[j]);
+
         }
     }else {
         arr.push(nameTag[i].childNodes[0].nodeValue);
