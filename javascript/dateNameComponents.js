@@ -159,8 +159,8 @@ class sideBar extends HTMLElement {
                         <a href="../html/index.html"><i class="fas fa-link"></i>Domov</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-qrcode"></i>Hry</a>
-                        <ul>
+                        <a id="gamesDiv" href="#"><i class="fas fa-qrcode"></i>Hry</a>
+                        <ul id="games">
                             <li id="lGame">
                                 <a href="../html/lukasHTML.html"><i class="fas fa-qrcode"></i>Lukáš hra</a>
                             </li>
@@ -200,4 +200,17 @@ class sideBar extends HTMLElement {
 
 if (!customElements.get('side-bar')) {
     customElements.define('side-bar', sideBar);
+}
+let games=document.getElementById("games");
+let gamesDiv = document.getElementById("gamesDiv")
+gamesDiv.addEventListener("click",showUnderGames)
+function showUnderGames(){
+    for (let i=0; i<games.children.length;i++){
+        if(games.children[i].style.display===""
+            || games.children[i].style.display==="none")
+        games.children[i].style.display="block";
+        else{
+            games.children[i].style.display="none"
+        }
+    }
 }

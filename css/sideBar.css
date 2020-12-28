@@ -94,4 +94,7 @@ label #cancel {
 #check:checked ~ section {
   margin-left: 250px;
 }
+#lGame,#pGame,#eGame{
+  display: none;
+}
 
