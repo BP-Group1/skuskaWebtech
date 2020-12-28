@@ -11,9 +11,22 @@ xhttp.send();
 xmlDoc = xhttp.responseXML;
 let arr = [];
 let nameTag=xmlDoc.getElementsByTagName("SK");
+let name;
+let nameSplit;
 for(let i=0;i<nameTag.length;i++){
-    arr.push(nameTag[i].childNodes[0].nodeValue);
+    name = nameTag[i].childNodes[0].nodeValue;
+    nameSplit = name.split(",");
+    console.log(nameSplit);
+    if(nameSplit.length>1){
+        for (let j = 0; j<nameSplit.length;j++){
+            arr.push(nameSplit[j]);
+        }
+    }else {
+        arr.push(nameTag[i].childNodes[0].nodeValue);
+    }
 }
+
+
 
 
 function autocomplete(inp, arr) {
@@ -101,7 +114,7 @@ function autocomplete(inp, arr) {
         /*close all autocomplete lists in the document,
         except the one passed as an argument:*/
         let x = document.getElementsByClassName("autocomplete-items");
-        for (var i = 0; i < x.length; i++) {
+        for (let i = 0; i < x.length; i++) {
             if (elmnt !== x[i] && elmnt !== inp) {
                 x[i].parentNode.removeChild(x[i]);
             }
