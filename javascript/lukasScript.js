@@ -5,6 +5,7 @@
 var pustiCas = 0;
 var spravnePolozene = 0;
 var spustene;
+var casDisplay
 function povolPustenie(ev) {
 
     ev.preventDefault();
@@ -31,6 +32,7 @@ function pustiObrazok(ev,id) {
     if(spravnePolozene == 10)
     {
         clearTimeout(spustene);
+        gratulacia();
     }
 
 }
@@ -59,7 +61,7 @@ function zobrazCas(sekundy, minuty){
     {
         minuty="0" + minuty;
     }
-    var casDisplay = "00:" + minuty + ":" + sekundy;
+    casDisplay = "00:" + minuty + ":" + sekundy;
     document.getElementById("cas").innerText = casDisplay;
 }
 
@@ -68,6 +70,13 @@ function pocitajCas(){
     cas();
     spustene = setTimeout('pocitajCas();',1000)
 }
+
+function gratulacia(){
+    document.getElementById("div1").style.display = "none"
+    document.getElementById("div2").style.display = "block"
+    document.getElementById("vyslednyCas").innerText = casDisplay;
+}
+
 
 document.getElementById("eGame").addEventListener('mousemove', function (){
     document.getElementById("stiloImgL").style.display = "block";
