@@ -39,8 +39,8 @@ footer{
     color: snow;
     background-color: #333333;
     text-align: center;
-
 }
+
 .time,#nameDay,#time{
     float: right;
     padding-right: 10px;
@@ -188,6 +188,10 @@ table{
     border-collapse: collapse;
     width: 80%;
 }
-#pocetNavstev{
-    color: white;
+
+pocet-navstev{
+    position: fixed;
+    bottom: -12px;
+    right: 10px;
+
 }
