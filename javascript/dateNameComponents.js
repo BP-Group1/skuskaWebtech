@@ -210,7 +210,7 @@ class sideBar extends HTMLElement {
                         <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
                     </li>
                     <li>
-                        <a href="../html/about.html"><i class="far fa-question-circle"></i>About</a>
+                        <a href="../html/about.html"><i class="far fa-question-circle"></i>O nás</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-sliders-h"></i>Services</a>

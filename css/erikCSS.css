@@ -184,14 +184,14 @@ h1{
 
 #congrats{
     z-index: -1;
-    width: fit-content;
+   /* width: fit-content;*/
     margin-right: auto;
     margin-left: auto;
     position: absolute;
     left: 100px;
     top: 100px;
     display: none;
-
+    width: 1600px;
 }
 
 #c1{
@@ -214,4 +214,24 @@ h1{
     width: 533px;
     text-align: center;
     float: left;
+}
+
+#stiloAssemblyCounter{
+    position: fixed;
+    left: 10px;
+    top: 75px;
+}
+
+#gin{
+    position: absolute;
+    top: 3px;
+    left: 300px;
+    cursor: pointer;
+}
+
+#man{
+    position: absolute;
+    top: 3px;
+    left: 400px;
+    cursor: pointer;
 }

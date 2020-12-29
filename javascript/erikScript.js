@@ -25,12 +25,9 @@ function drop(ev, id) {
 
     if(counting === 9){
         stop();
-        if (timeElapsed>59){
-            // TODO: minuty
-        }
         document.getElementById("timeStiloAssembly").innerText = timeElapsed;
         document.getElementById("congrats").style.display = 'block';
-        console.log(timeElapsed);
+        document.getElementById("stiloAssemblyCounter").style.display = 'none';
     }
 }
 
@@ -90,3 +87,7 @@ function stop() {
         timerID = -1
     }
 }
+
+document.getElementById("gin").addEventListener('click', function (){
+    window.history.go(0);
+});
