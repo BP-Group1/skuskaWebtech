@@ -261,7 +261,7 @@ localStorage.setItem("pocet", pocetPristupov);
 class pocetNavstev extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `<p>
-        Naše stránky si navštívil spolu: ${pocetPristupov}-krát :D 
+        Naše stránky si navštívil spolu: ${pocetPristupov}-krát 😃 
            </p> `;
     }
 
