@@ -81,9 +81,10 @@ function resizeImages(){
 
         parts[i].style.width=calculateWidth+'px';
         parts[i].style.height=calculateHeight+'px';
-
-        droppable[i].style.width = calculateWidth + 'px';
-        droppable[i].style.height = calculateHeight+ 'px';
+        if(i<parts.length-1) {
+            droppable[i].style.width = calculateWidth + 'px';
+            droppable[i].style.height = calculateHeight + 'px';
+        }
     }
 }
 function setTime() {
@@ -115,6 +116,21 @@ function pauseTimer(){
 
 function reload(){
     location.reload();
+}
+let isAnimating;
+function illustration(){
+    if(!isAnimating) {
+        for (let j = 0; j < parts.length - 1; j++) {
+            parts[j].classList.add(parts[j].id)
+        }
+        isAnimating=true;
+    }else{
+        for (let j = 0; j < parts.length - 1; j++) {
+            parts[j].classList.remove(parts[j].id)
+        }
+        isAnimating=false;
+    }
+
 }
 
 document.getElementById("eGame").addEventListener('mousemove', function (){
