@@ -4,6 +4,7 @@ var pole=[];
 pole.push(document.title);
 console.log(pole);
 
+
 $(document).ready(function (){
 
     console.log(pole.length);
