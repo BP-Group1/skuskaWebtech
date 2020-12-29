@@ -77,7 +77,7 @@ function pridanieStranky(titul) {
         novaStranka.setAttribute("href","../html/checklist.html");
     }
     else
-    novaStranka.setAttribute("href","http://147.175.121.202/~xpribulal/pribulikZ7");
+    novaStranka.setAttribute("href","https://www.fei.stuba.sk/");
     novaStranka.innerText=titul;
 
     /*
