@@ -7,6 +7,7 @@ function allowDrop(ev) {
 
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
+    start();
 }
 
 function drop(ev, id) {
@@ -23,7 +24,13 @@ function drop(ev, id) {
     }
 
     if(counting === 9){
+        stop();
+        if (timeElapsed>59){
+            // TODO: minuty
+        }
+        document.getElementById("timeStiloAssembly").innerText = timeElapsed;
         document.getElementById("congrats").style.display = 'block';
+        console.log(timeElapsed);
     }
 }
 
@@ -62,3 +69,24 @@ document.getElementById("pGame").addEventListener('mousemove', function (){
 document.getElementById("pGame").addEventListener('mouseleave', function (){
     document.getElementById("counterStrikeImgE").style.display = "none";
 });
+
+
+var timeElapsed = 0;
+var timerID = -1;
+function tick() {
+    timeElapsed++
+    document.getElementById("timer").innerHTML = timeElapsed;
+}
+
+function start() {
+    if(timerID == -1){
+        timerID = setInterval(tick, 1000);
+    }
+}
+
+function stop() {
+    if(timerID != -1){
+        clearInterval(timerID)
+        timerID = -1
+    }
+}
