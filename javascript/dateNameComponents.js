@@ -257,4 +257,17 @@ else
 
 localStorage.setItem("pocet", pocetPristupov);
 
-document.getElementById('pocetNavstev').innerHTML = "Naše stránky si navštívil: " + pocetPristupov;
+
+class pocetNavstev extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `<p>
+        Naše stránky si navštívil spolu: ${pocetPristupov}-krát :D 
+           </p> `;
+    }
+
+}
+
+if (!customElements.get('pocet-navstev')) {
+    customElements.define('pocet-navstev', pocetNavstev);
+}
+
