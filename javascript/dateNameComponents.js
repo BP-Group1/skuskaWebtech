@@ -192,7 +192,7 @@ class sideBar extends HTMLElement {
                             </li>
 
                             <li id="pGame">
-                                <a href="../html/peterHTML.html"><i class="fas fa-qrcode"></i>Peter hra</a>
+                                <a href="../html/counterStrikeGame.html"><i class="fas fa-qrcode"></i>Peter hra</a>
                             </li>
 
                             <li id="eGame">

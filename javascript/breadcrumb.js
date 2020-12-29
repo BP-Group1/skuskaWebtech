@@ -44,7 +44,7 @@ function pridanieStranky(titul) {
         novaStranka.setAttribute("href","../html/erikHTML.html");
     }
     else if (titul === "Petrove HTML"){
-        novaStranka.setAttribute("href","../html/peterHTML.html");
+        novaStranka.setAttribute("href","../html/counterStrikeGame.html");
     }
     else if (titul === "name days"){
         novaStranka.setAttribute("href","../html/nameDays.html");
@@ -68,7 +68,7 @@ function pridanieStranky(titul) {
     case "Erik's HTML":
         novaStranka.setAttribute("href","../html/erikHTML.htm"); brake;
     case "Petrove HTML":
-        novaStranka.setAttribute("href","../html/peterHTML.html"); brake;
+        novaStranka.setAttribute("href","../html/counterStrikeGame.html"); brake;
     case "name days":
         novaStranka.setAttribute("href","../html/nameDays.html"); brake;
     case "O nás":

@@ -23,7 +23,7 @@ let nameDiv = document.getElementById("namesDiv");
 let dateAfterChange;
 let inputName,inputDate;
 let choice=1;
-let hi="čČďý"
+
 
 
 
