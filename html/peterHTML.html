@@ -39,12 +39,15 @@
         iba tieto 2 riadky kodu do svojho html <side-bar></side-bar>-->
 
     </side-bar>
+    <div id="timer">
+        Čas: <label id="minutes">00</label>:<label id="seconds">00</label>
+    </div>
     <main>
 
         <p class="h1">
-            Petrova Hra
+            Counter Strike
         </p>
-            <div id="picture" class="picture container">
+            <div id="picture" class="picture container gameWindows">
                 <img id="main" class="img-fluid" src="../img/peterObrazok/background/final.png" alt="csgo">
                 <div id="bombDrop" class="droppable"> </div>
                 <div id="ctPanakDrop" class="droppable"> </div>
@@ -58,13 +61,7 @@
                 <div id="zbranDrop" class="droppable"> </div>
                 <div id="zbran2Drop" class="droppable"> </div>
             </div>
-            <div id="parts" class="container">
-                <!-- takto
-                <div class="parts">
-
-                </div>
-                -->
-                <!-- alebo -->
+            <div id="parts" class="container gameWindows">
                <img id="bomb" class="parts img-fluid" src="../img/peterObrazok/parts/bomba.png" alt="homba">
                <img id="ctPanak" class="parts img-fluid" src="../img/peterObrazok/parts/csgoPanakPrec.png" alt="panakPrec">
                <img id="hlava1" class="parts img-fluid" src="../img/peterObrazok/parts/hlava1.png" alt="hlava1">
@@ -77,6 +74,12 @@
                <img id="zbran" class="parts img-fluid" src="../img/peterObrazok/parts/zbran.png" alt="zbran">
                <img id="zbran2" class="parts img-fluid" src="../img/peterObrazok/parts/zbran2.png" alt="zbran2">
            </div>
+        <div id="buttons" class="container">
+            <button type="button" class="btn btn-danger">Reset</button>
+            <button type="button" class="btn btn-info">Demo</button>
+            <button type="button" class="btn btn-primary" onclick="startTimer();">Start</button>
+            <button type="button" class="btn btn-warning" onclick="pauseTimer();">Pause</button>
+        </div>
 
 
         <div class="imageShow">

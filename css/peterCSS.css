@@ -8,7 +8,7 @@
   font-weight: bold;
   text-align: center;
 }
-.container{
+.gameWindows{
   background: gray;
   max-width: 1200px;
   border-style: groove;
@@ -164,10 +164,30 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.result{
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  background-color: yellow;
+  font-size: 20px;
+}
+#buttons{
+  padding-bottom: 30px;
+  text-align: center;
+}
+#timer{
+  position: absolute;
+  top: 11%;
+  left: 1%;
+  color: black;
+  font-size: medium;
+  background: yellow;
+}
 @media screen and (max-width: 810px){
   #bombDrop{left: 82.20%;}
 }
 @media screen and (max-width: 500px){
+  .result{font-size: 10px}
   #bombDrop{left: 81.9%;}
 }
 @media screen and (max-width: 400px){
@@ -212,4 +232,7 @@
 }
 #parts{
   margin-bottom: 25px;
+}
+.btn{
+  margin-top: 10px;
 }

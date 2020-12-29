@@ -6,9 +6,12 @@ let draggableOptions = {
     cursor: "move",
     revertDuration: 0
 }
-
+let clicked=0;
 $( function() {
     $( ".parts").draggable({
+        drag: function (){
+            startTimer();
+        },
         containment: "#picture",
         helper: "clone",
         cursor: "move",
@@ -22,19 +25,18 @@ $( function() {
                     .find( "img" )
                     .html( "Dropped!" );
             }
+            if(allDropsCorrect()===true){
+
+            }
         }
     });
 } );
+
 function isDropOk(event,ui){
-    console.log(event.target.id);
-    console.log(ui.draggable[0].id);
     let a = event.target.id;
     a=a.split("D");
     a=a[0];
     let b = ui.draggable[0].id;
-    console.log(a);
-    console.log(b);
-    console.log(a===b);
     if(a===b){
         document.getElementById(b).style.display="none";
     }
@@ -59,6 +61,23 @@ $(window).resize(function (){
     actualWidth=picture.clientWidth;
     resizeImages();
 })
+
+let minutesLabel = document.getElementById("minutes");
+let secondsLabel = document.getElementById("seconds");
+let totalSeconds = 0;
+let isPaused;
+function allDropsCorrect(){
+    let count=0;
+    for (let i = 0;i<droppable.length;i++){
+        if(droppable[i].className.includes("Correct")){
+            count++;
+        }
+    }
+    if(count===11){
+        isPaused=true;
+        $('#picture').append("<p class='result'>Víťazstvo, gratulujeme! <br> zvládli ste to za tento čas : "+pad(parseInt(totalSeconds / 60)+":"+pad(totalSeconds % 60)+"</p>"));
+    }
+}
 function resizeImages(){
     for(let i=0;i<parts.length;i++){
         calculateHeight=(actualHeight/maxHeight);
@@ -72,6 +91,32 @@ function resizeImages(){
         droppable[i].style.width = calculateWidth + 'px';
         droppable[i].style.height = calculateHeight+ 'px';
     }
+}
+function setTime() {
+    if(!isPaused) {
+        ++totalSeconds;
+        secondsLabel.innerHTML = pad(totalSeconds % 60);
+        minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    }
+}
+
+function pad(val) {
+    let valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString;
+    } else {
+        return valString;
+    }
+}
+function startTimer(){
+    isPaused=false;
+    if(clicked===0){
+        setInterval(setTime, 1000);
+        clicked=1;
+    }
+}
+function pauseTimer(){
+    isPaused=true;
 }
 
 //alebo
