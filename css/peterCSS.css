@@ -15,19 +15,15 @@
   border-color: coral;
   border-width: 7px;
   padding: 5px;
+  position: relative;
 }
 
-.gamePicture{
-  max-width: 100%;
-  height: auto;
-}/* takto?
 .parts{
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
 
-  background-image: url(../img/peterObrazok/parts/bomba.png);
-}*/
+}
 .parts{
   height: auto;
 }
@@ -35,14 +31,184 @@
   width: 97px;
   height: 87px;
   position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 70%;
+ margin-right: auto;
+  top: 63.1%;
+  left: 82.40%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ctPanakDrop{
+  width: 37px;
+  height: 84px;
+  position: absolute;
+  margin-right: auto;
+  top: 45%;
+  left: 55.1%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hlava1Drop{
+  width: 96px;
+  height: 116px;
+  position: absolute;
+  margin-right: auto;
+  top: 40.5%;
+  left: 34.6%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hlava2Drop{
+  width: 115px;
+  height: 111px;
+  position: absolute;
+  margin-right: auto;
+  top: 40.8%;
+  left: 80.4%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
-.bombCorrect{
+#lampaDrop{
+  width: 38px;
+  height: 47px;
+  position: absolute;
+  margin-right: auto;
+  top: 28.5%;
+  left: 57.5%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  //background-image: url("../img/peterObrazok/parts/bomba.png");
+}
+#nozikDrop{
+  width: 77px;
+  height: 66px;
+  position: absolute;
+  margin-right: auto;
+  top: 50.5%;
+  left: 73.3%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#okulareDrop{
+  width: 62px;
+  height: 26px;
+  position: absolute;
+  margin-right: auto;
+  top: 46.2%;
+  left: 19.9%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ruskoDrop{
+  width: 131px;
+  height: 130px;
+  position: absolute;
+  margin-right: auto;
+  top: 51.4%;
+  left: 58%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+#sipkaDrop{
+  width: 48px;
+  height: 116px;
+  position: absolute;
+  margin-right: auto;
+  top: 22.8%;
+  left: 35.9%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+#zbranDrop{
+  width: 83px;
+  height: 68px;
+  position: absolute;
+  margin-right: auto;
+  top: 56%;
+  left: 1.5%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+#zbran2Drop{
+  width: 81px;
+  height: 119px;
+  position: absolute;
+  margin-right: auto;
+  top: 32.1%;
+  left: 44.7%;
+  offset: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 810px){
+  #bombDrop{left: 82.20%;}
+}
+@media screen and (max-width: 500px){
+  #bombDrop{left: 81.9%;}
+}
+@media screen and (max-width: 400px){
+  #bombDrop{left: 81.7%;
+    top: 63%;}
+}
+@media screen and (max-width: 300px){
+  #bombDrop{left: 81.6%;}
+}
+.bombCorrect{
+  background-image: url("../img/peterObrazok/parts/bomba.png");
+}
+.ctPanakCorrect{
+  background-image: url("../img/peterObrazok/parts/csgoPanakPrec.png")
+}
+.hlava1Correct{
+  background-image: url("../img/peterObrazok/parts/hlava1.png")
+}
+.hlava2Correct{
+  background-image: url("../img/peterObrazok/parts/hlava2.png")
+}
+.lampaCorrect{
+  background-image: url("../img/peterObrazok/parts/lampa.png")
+}
+.nozikCorrect{
+  background-image: url("../img/peterObrazok/parts/nozik.png")
+}
+.okulareCorrect{
+  background-image: url("../img/peterObrazok/parts/okulare.png")
+}
+.ruskoCorrect{
+  background-image: url("../img/peterObrazok/parts/rusko.png")
+}
+.sipkaCorrect{
+  background-image: url("../img/peterObrazok/parts/sipka.png")
+}
+.zbranCorrect{
+  background-image: url("../img/peterObrazok/parts/zbran.png")
+}
+.zbran2Correct{
+  background-image: url("../img/peterObrazok/parts/zbran2.png")
 }
 #parts{
   margin-bottom: 25px;

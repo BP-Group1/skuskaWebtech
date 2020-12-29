@@ -16,13 +16,37 @@ $( function() {
         revert: "invalid",});
     $( ".droppable" ).droppable({
         drop: function( event, ui ) {
-            $( this )
-                .addClass( "bombCorrect" )
-                .find( "img" )
-                .html( "Dropped!" );
+            if(isDropOk(event,ui)===true){
+                $( this )
+                    .addClass( getClassName(this) )
+                    .find( "img" )
+                    .html( "Dropped!" );
+            }
         }
     });
 } );
+function isDropOk(event,ui){
+    console.log(event.target.id);
+    console.log(ui.draggable[0].id);
+    let a = event.target.id;
+    a=a.split("D");
+    a=a[0];
+    let b = ui.draggable[0].id;
+    console.log(a);
+    console.log(b);
+    console.log(a===b);
+    if(a===b){
+        document.getElementById(b).style.display="none";
+    }
+    return a === b;
+
+}
+function getClassName(name){
+    let id = name.id;
+    id=id.split("D");
+
+    return id[0]+"Correct";
+}
 let maxWidth=1186,maxHeight=672,actualWidth,actualHeight,calculateWidth,calculateHeight;
 let picture = document.getElementById("picture");
 let parts = document.getElementsByClassName("parts");
@@ -42,13 +66,11 @@ function resizeImages(){
         calculateWidth=parts[i].naturalWidth*calculateWidth;
         calculateHeight=parts[i].naturalHeight*calculateHeight;
 
+
         parts[i].style.width=calculateWidth+'px';
         parts[i].style.height=calculateHeight+'px';
-        if(i===0) {
-            //TODO
-            droppable[0].style.width = calculateWidth + 'px';
-            droppable[0].style.height = calculateHeight+ 'px';
-        }
+        droppable[i].style.width = calculateWidth + 'px';
+        droppable[i].style.height = calculateHeight+ 'px';
     }
 }
 
