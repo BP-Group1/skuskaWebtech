@@ -78,6 +78,13 @@ function gratulacia(){
     document.getElementById("vyslednyCas").innerText = casDisplay;
 }
 
+function otvorAnimaciu(){
+    document.getElementById("animaciaOkno").style.display="block";
+
+}
+function zatvorAnimaciu(){
+    document.getElementById("animaciaOkno").style.display = "none";
+}
 
 document.getElementById("eGame").addEventListener('mousemove', function (){
     document.getElementById("stiloImgL").style.display = "block";

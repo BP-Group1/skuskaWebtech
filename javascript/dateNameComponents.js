@@ -241,3 +241,20 @@ function showUnderGames(){
     }
 }
 
+
+//storage pocet pristupov na stranky
+window.localStorage;
+var pocetPristupov = localStorage.getItem('pocet');
+
+if (pocetPristupov === null) {
+    pocetPristupov = parseInt(1);
+}
+else
+{
+    pocetPristupov = parseInt(pocetPristupov) + parseInt(1);
+}
+
+
+localStorage.setItem("pocet", pocetPristupov);
+
+document.getElementById('pocetNavstev').innerHTML = "Naše stránky si navštívil: " + pocetPristupov;

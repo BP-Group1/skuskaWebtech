@@ -125,5 +125,33 @@ p{
 }
 button{
     width: 100%;
+
+}
+
+#animaciaOkno{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    color: white;
+    font-size: large;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#animacia{
+    height:80%;
+    width:80%;
+}
+#tlacidlo1{
+    background-color: lime;
+}
+#tlacidlo2{
     background-color: fuchsia;
 }
