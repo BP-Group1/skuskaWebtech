@@ -17,7 +17,7 @@
 
 
 </head>
-<body>
+<body onload="resizeImages();">
 <div class="wrapper">
     <header>
         <div class="mainTitle">
@@ -72,11 +72,12 @@
                <img id="rusko" class="parts img-fluid" src="../img/peterObrazok/parts/rusko.png" alt="rusko">
                <img id="sipka" class="parts img-fluid" src="../img/peterObrazok/parts/sipka.png" alt="sipka">
                <img id="zbran" class="parts img-fluid" src="../img/peterObrazok/parts/zbran.png" alt="zbran">
-               <img id="zbran2" class="parts img-fluid" src="../img/peterObrazok/parts/zbran2.png" alt="zbran2">
+                <img id="zbran2" class="parts img-fluid" src="../img/peterObrazok/parts/zbran2.png" alt="zbran2">
+                <img id="ruskoH" class="parts img-fluid" src="../img/peterObrazok/parts/rusko.png" alt="rusko">
            </div>
         <div id="buttons" class="container">
             <button type="button" class="btn btn-danger" onclick="reload();">Reset</button>
-            <button id="demo" type="button" class="btn btn-info" onclick="animation();" >Demo</button>
+            <button id="demo" type="button" class="btn btn-info" onclick="illustration();" >Demo</button>
             <button type="button" class="btn btn-primary" onclick="startTimer();">Start</button>
             <button type="button" class="btn btn-warning" onclick="pauseTimer();">Pause</button>
         </div>

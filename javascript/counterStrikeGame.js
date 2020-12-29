@@ -44,10 +44,8 @@ let parts = document.getElementsByClassName("parts");
 let droppable=document.getElementsByClassName("droppable");
 actualHeight=picture.clientHeight;
 actualWidth=picture.clientWidth;
-resizeImages();
+
 $(window).resize(function (){
-    actualHeight=picture.clientHeight;
-    actualWidth=picture.clientWidth;
     resizeImages();
 })
 
@@ -69,17 +67,24 @@ function allDropsCorrect(){
     }
 }
 function resizeImages(){
+    actualHeight=picture.clientHeight;
+    actualWidth=picture.clientWidth;
+
     for(let i=0;i<parts.length;i++){
         calculateHeight=(actualHeight/maxHeight);
         calculateWidth=(actualWidth/maxWidth);
+
+
         calculateWidth=parts[i].naturalWidth*calculateWidth;
         calculateHeight=parts[i].naturalHeight*calculateHeight;
 
 
         parts[i].style.width=calculateWidth+'px';
         parts[i].style.height=calculateHeight+'px';
-        droppable[i].style.width = calculateWidth + 'px';
-        droppable[i].style.height = calculateHeight+ 'px';
+        if(i<parts.length-1) {
+            droppable[i].style.width = calculateWidth + 'px';
+            droppable[i].style.height = calculateHeight + 'px';
+        }
     }
 }
 function setTime() {
@@ -112,6 +117,21 @@ function pauseTimer(){
 function reload(){
     location.reload();
 }
+let isAnimating;
+function illustration(){
+    if(!isAnimating) {
+        for (let j = 0; j < parts.length - 1; j++) {
+            parts[j].classList.add(parts[j].id)
+        }
+        isAnimating=true;
+    }else{
+        for (let j = 0; j < parts.length - 1; j++) {
+            parts[j].classList.remove(parts[j].id)
+        }
+        isAnimating=false;
+    }
+
+}
 
 document.getElementById("eGame").addEventListener('mousemove', function (){
     document.getElementById("stiloImgP").style.display = "block";
@@ -131,3 +151,4 @@ document.getElementById("pGame").addEventListener('mousemove', function (){
 document.getElementById("pGame").addEventListener('mouseleave', function (){
     document.getElementById("counterStrikeImgP").style.display = "none";
 });
+

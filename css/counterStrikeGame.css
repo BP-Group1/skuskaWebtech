@@ -24,6 +24,8 @@
   background-repeat: no-repeat;
 
 }
+
+
 .parts{
   height: auto;
 }
@@ -39,6 +41,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bomb{
+  position: absolute;
+  left:0; top:20%;
+  animation: bombAnime 5s linear 2s infinite alternate;
+}
+@keyframes bombAnime {
+  0%   { position: absolute; left:0; top:20%;}
+  25%  {left:30%; top:-130%;}
+  50%  {  left:50%; top:-150%;}
+  75%  { left:82.40%;  top:-160%;}
+  100% { left:82.40%;   top: -190%;}
+}
 #ctPanakDrop{
   width: 37px;
   height: 84px;
@@ -50,6 +64,18 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.ctPanak{
+  position: absolute;
+  left:10%; top:10%;
+  animation: ctPanakAnime 5s linear 2s infinite alternate;
+}
+@keyframes ctPanakAnime {
+  0%   { position: absolute; left:10%; top:10%;}
+  25%  {left:15%; top:-160%;}
+  50%  { left:25%; top:-200%;}
+  75%  { left:55.1%;  top:-250%;}
+  100% { left: 55.1%;   top: -277%;}
 }
 #hlava1Drop{
   width: 96px;
@@ -63,6 +89,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hlava1{
+  position: absolute;
+  left:20%; top:10%;
+  animation: hlava1Anime 5s linear 2s infinite alternate;
+}
+@keyframes hlava1Anime {
+  0%   { position: absolute; left:20%; top:10%;}
+  25%  {left:20%; top:-100%;}
+  50%  { left:30%; top:-230%;}
+  75%  { left:34.6%;  top:-260%;}
+  100% { left: 34.6%;   top: -293%;}
+}
 #hlava2Drop{
   width: 115px;
   height: 111px;
@@ -74,7 +112,18 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
+}
+.hlava2{
+  position: absolute;
+  left:30%; top:10%;
+  animation: hlava2Anime 5s linear 2s infinite alternate;
+}
+@keyframes hlava2Anime {
+  0%   { position: absolute; left:30%; top:10%;}
+  25%  {left:35%; top:-130%;}
+  50%  { left:50%; top:-280%;}
+  75%  { left:80.4%;  top:-270%;}
+  100% { left: 80.4%;   top: -293%;}
 }
 #lampaDrop{
   width: 38px;
@@ -87,7 +136,18 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
+}
+.lampa{
+  position: absolute;
+  left:45%; top:30%;
+  animation: lampaAnime 5s linear 2s infinite alternate;
+}
+@keyframes lampaAnime {
+  0%   { position: absolute; left:45%; top:30%;}
+  25%  {left:42%; top:-150%;}
+  50%  { left:50%; top:-300%;}
+  75%  { left:57.5%;  top:-340%;}
+  100% { left: 57.5%;   top: -355%;}
 }
 #nozikDrop{
   width: 77px;
@@ -101,6 +161,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.nozik{
+  position: absolute;
+  left:50%; top:30%;
+  animation: nozikAnime 5s linear 2s infinite alternate;
+}
+@keyframes nozikAnime {
+  0%   { position: absolute; left:55%; top:50%;}
+  25%  {left:55%; top:-100%;}
+  50%  { left:60%; top:-180%;}
+  75%  { left:73.3%;  top:-220%;}
+  100% { left: 73.3%;   top: -250%;}
+}
 #okulareDrop{
   width: 62px;
   height: 26px;
@@ -113,6 +185,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.okulare{
+  position: absolute;
+  left:60%; top:50%;
+  animation: okulareAnime 5s linear 2s infinite alternate;
+}
+@keyframes okulareAnime {
+  0%   { position: absolute; left:60%; top:50%;}
+  25%  {left:40%; top:-100%;}
+  50%  { left:30%; top:-180%;}
+  75%  { left:19.9%;  top:-260%;}
+  100% { left: 19.9%;   top: -271%;}
+}
 #ruskoDrop{
   width: 131px;
   height: 130px;
@@ -124,7 +208,18 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
+}
+.rusko{
+  position: absolute;
+  left:68%; top:0;
+  animation: ruskoAnime 5s linear 2s infinite alternate;
+}
+@keyframes ruskoAnime {
+  0%   { position: absolute; left:68%; top:0;}
+  25%  {left:65%; top:-100%;}
+  50%  { left:62%; top:-180%;}
+  75%  { left: 58%;  top:-230%;}
+  100% { left: 58%;   top: -248%;}
 }
 #sipkaDrop{
   width: 48px;
@@ -139,6 +234,18 @@
   background-repeat: no-repeat;
 
 }
+.sipka{
+  position: absolute;
+  left:80%; top:0;
+  animation: sipkaAnime 5s linear 2s infinite alternate;
+}
+@keyframes sipkaAnime {
+  0%   { position: absolute; left:80%; top:0;}
+  25%  {left:65%; top:-200%;}
+  50%  { left:62%; top:-250%;}
+  75%  { left: 35.9%;  top:-350%;}
+  100% { left: 35.9%;   top: -380%;}
+}
 #zbranDrop{
   width: 83px;
   height: 68px;
@@ -150,7 +257,18 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
+}
+.zbran{
+  position: absolute;
+  left:85%; top:0;
+  animation: zbranAnime 5s linear 2s infinite alternate;
+}
+@keyframes zbranAnime {
+  0%   { position: absolute; left:85%; top:0;}
+  25%  {left:50%; top:-50%;}
+  50%  { left:20%; top:-100%;}
+  75%  { left: 1.5%;  top:-200%;}
+  100% { left: 1.5%;   top: -222%;}
 }
 #zbran2Drop{
   width: 81px;
@@ -163,6 +281,18 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.zbran2{
+  position: absolute;
+  left:90%; top:0;
+  animation: zbran2Anime 5s linear 2s infinite alternate;
+}
+@keyframes zbran2Anime {
+  0%   { position: absolute; left:90%; top:0;}
+  25%  {left:80%; top:-100%;}
+  50%  { left:60%; top:-180%;}
+  75%  { left: 44.7%;  top:-320%;}
+  100% { left: 44.7%;   top: -337%;}
 }
 .result{
   position: absolute;
@@ -182,6 +312,9 @@
   color: black;
   font-size: medium;
   background: yellow;
+}
+#ruskoH{
+  visibility: hidden;
 }
 @media screen and (max-width: 810px){
   #bombDrop{left: 82.20%;}
