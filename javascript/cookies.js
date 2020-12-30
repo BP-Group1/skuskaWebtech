@@ -1,4 +1,4 @@
-/*  COOKIES */
+/**  COOKIES **/
 document.cookie;
 console.log(document.cookie.toString());
 if (document.cookie.toString() == ""){
@@ -41,4 +41,4 @@ function checkCookies(){
     }
 }
 
-/** COOKIES **/
+/* COOKIES */
