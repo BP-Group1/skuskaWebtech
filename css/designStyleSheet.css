@@ -189,6 +189,7 @@ table{
 }
 
 pocet-navstev{
+    z-index: -100;
     position: fixed;
     /*bottom: -16px;*/
     bottom: 8px;

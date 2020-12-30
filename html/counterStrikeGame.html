@@ -50,6 +50,10 @@
         </p>
             <div id="picture" class="picture container gameWindows">
                 <img id="main" class="img-fluid" src="../img/peterObrazok/background/final.png" alt="csgo">
+                <label class="volume" for="volume">
+                    <img class="volumeLabel" src="../img/icons/giphy.gif"/>
+                    <input id="volume" step="0.01" min="0" max="1" type="range" name="range" value="0.5" onchange="changeVolume()">
+                </label>
                 <div id="bombDrop" class="droppable"> </div>
                 <div id="ctPanakDrop" class="droppable"> </div>
                 <div id="hlava1Drop" class="droppable"> </div>
@@ -84,6 +88,29 @@
         </div>
 
 
+
+
+        <div class="container">
+            <p class="h1 n">Návod</p>
+            <p class="d">
+                Hra spočíva v nájdení správnych obrázkov a priradiť ich na správne miesta.
+                Keď budú všetky obrázky na správnom mieste hra sa ukončí a hráč tým pádom vyhral.
+                Časomiera začne kliknutím na obrázok alebo kliknutím na tlačidlo štart.
+                Pokúste sa to za najkratší čas.<br> Svetový rekord v tejto hre je <span class="bold" >4 sekundy</span>.
+                <br><br>
+                <span class="bold" >Reset</span> - Reštartuje hru.
+                <br>
+                <span class="bold" >Demo</span> - Ukáže návod na poskladanie obrázkov pomoci animácie. Druhý klik túto funkciu vypne.
+                <br>
+                <span class="bold" >Start</span>  - Štart časomiery.
+                <br>
+                <span class="bold" >Pause</span>  - Pauza časomiery.
+                <br>
+                <span class="bold" >Nastavenia</span>  - Hudba sa dá vypnúť v ľavom hornom rohu. Na začiatku je nastavená na 50%.
+            </p>
+        </div>
+
+
         <div class="imageShow">
             <div class="smImgDiv" id="stiloImgP">
                 <img class="smImg" src="../img/tooltip/Stilo2.jpg" alt="stilo">
@@ -111,8 +138,10 @@
     <script src="../javascript/dateNameComponents.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../javascript/counterStrikeGame.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="../javascript/breadcrumb.js"></script>
+    <script src="../javascript/counterStrikeGame.js"></script>
+
     <!-- javaScript  -->
 </div>
 </body>

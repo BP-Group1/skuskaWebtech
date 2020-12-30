@@ -302,7 +302,7 @@
   font-size: 20px;
 }
 #buttons{
-  padding-bottom: 30px;
+
   text-align: center;
 }
 #timer{
@@ -316,6 +316,9 @@
 #ruskoH{
   visibility: hidden;
 }
+#volume{
+  width: 20%;
+}
 @media screen and (max-width: 810px){
   #bombDrop{left: 82.20%;}
 }
@@ -323,7 +326,39 @@
   .result{font-size: 10px}
   #bombDrop{left: 81.9%;}
 }
+@media screen and (max-height: 740px){
+  #timer{
+    top: 11%!important;
+  }
+}
+@media screen and (max-height: 613px){
+  #timer{
+    top: 15%!important;
+  }
+}
+@media screen and (max-height: 450px){
+
+  #timer{
+    top: 19%!important;
+  }
+}
+@media screen and (max-height: 340px){
+  #timer{
+    top: 28%!important;
+  }
+}
+@media screen and (max-height: 400px){
+  #timer{
+    top: 11%;
+  }
+}
 @media screen and (max-width: 400px){
+  #timer{
+    top: 9%;
+  }
+  #volume{
+    width: 30%!important;
+  }
   #bombDrop{left: 81.7%;
     top: 63%;}
 }
@@ -369,3 +404,24 @@
 .btn{
   margin-top: 10px;
 }
+.n{
+  text-align: left;
+  padding-bottom: 5px;
+}
+.d{
+  padding-bottom: 50px;
+}
+.bold{
+  font-weight: bold;
+}
+.volume{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+.volumeLabel{
+  width: 15%;
+  height: 15%;
+}
+
+
