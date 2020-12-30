@@ -1,17 +1,17 @@
 window.localStorage;
-console.log(document.title)
+//console.log(document.title)
 var pole=[];
 if (localStorage.getItem('poleStranok') != undefined){
 var slovo = localStorage.getItem('poleStranok');
-console.log(slovo.toString());
+//console.log(slovo.toString());
 //pole.push(slovo);
 var slovicko="";
 for (let i = 0; i<slovo.length;i++){
-    console.log(slovo[i]);
+    //console.log(slovo[i]);
     if (slovo[i]===","){
         pole.push(slovicko);
-        console.log("mam");
-        console.log(slovicko)
+       // console.log("mam");
+       // console.log(slovicko)
         slovicko="";
     }
     else {
@@ -22,12 +22,12 @@ for (let i = 0; i<slovo.length;i++){
 pole.push(slovicko);
 }
 pole.push(document.title);
-console.log(pole);
+//console.log(pole);
 
 localStorage.setItem("poleStranok", pole);
 $(document).ready(function (){
 
-    console.log(pole.length);
+    //console.log(pole.length);
     //vytvorenie retazca
     let y = document.createElement("ol");
     y.setAttribute("class","breadcrumb");
