@@ -275,3 +275,11 @@ if (!customElements.get('pocet-navstev')) {
     customElements.define('pocet-navstev', pocetNavstev);
 }
 /*     access counter   */
+
+/**     history     **/
+document.getElementById("btn").addEventListener('click', function (){
+   document.getElementById("historia").style.display = "block";
+});
+document.getElementById("cancel").addEventListener('click', function (){
+    document.getElementById("historia").style.display = "none";
+});
