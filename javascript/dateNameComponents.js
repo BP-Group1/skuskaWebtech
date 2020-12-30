@@ -206,7 +206,7 @@ class sideBar extends HTMLElement {
                     <li>
                         <a href="../html/checklist.html"><i class="fas fa-stream"></i>Práce</a>
                     </li>
-                    <li>
+                   <!-- <li>
                         <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
                     </li>
                     <li>
@@ -217,7 +217,7 @@ class sideBar extends HTMLElement {
                     </li>
                     <li>
                         <a href="#"><i class="far fa-envelope"></i>Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- sideBar  -->`;
@@ -271,30 +271,3 @@ if (!customElements.get('pocet-navstev')) {
     customElements.define('pocet-navstev', pocetNavstev);
 }
 
-/*  COOKIES */
-
-var cookiesEnabled = false;
-
-$(document).ready(function (){
-    checkCookies();
-});
-
-document.getElementById("enableCookies").addEventListener('click', function (){
-    cookiesEnabled = true;
-    checkCookies();
-});
-document.getElementById("disableCookies").addEventListener('click', function (){
-   cookiesEnabled = false;
-   checkCookies();
-});
-
-function checkCookies(){
-    if(cookiesEnabled === true){
-        document.getElementById("cookiesDiv").style.display = "none";
-    }
-    if(cookiesEnabled === false){
-        document.getElementById("cookiesDiv").style.display = "block";
-    }
-}
-
-/** COOKIES **/
