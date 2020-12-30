@@ -228,12 +228,11 @@ function changeVolume(){
     for (let i =0;i<sounds.length;i++){
         sounds[i].volume=number;
     }
-    if(number===0){
-        backgroundMusic.pause();
+    if(number==0){
 
+        backgroundMusic.volume=0;
     }else{
         backgroundMusic.volume=0.1;
-        backgroundMusic.play();
     }
 }
 changeVolume(0.5);
