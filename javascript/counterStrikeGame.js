@@ -13,7 +13,8 @@ let throwingFire = document.createElement('audio');
 let throwingFlash = document.createElement('audio');
 let wonRound = document.createElement('audio');
 let knifeStab = document.createElement('audio');
-sounds.push(ak47,awp,bombPlanted,bombDefused,desertEagle,famas,grenadeOut,p90,planting,roundDraw,throwingFlash,throwingFire,wonRound,knifeStab);
+let backgroundMusic =document.createElement('audio');
+sounds.push(ak47,awp,bombPlanted,bombDefused,desertEagle,famas,grenadeOut,p90,planting,roundDraw,throwingFlash,throwingFire,wonRound,knifeStab,backgroundMusic);
 for (let i =0;i<sounds.length;i++){
     sounds[i].controls=true;
 }
@@ -31,6 +32,7 @@ throwingFire.src ='../sounds/Throwing Fire grenade Sound Effect [CSGO].mp3';
 throwingFlash.src ='../sounds/Throwing Flashbang Sound Effect [CSGO].mp3';
 wonRound.src ='../sounds/Won Round CSGO Sound Effect.mp3';
 knifeStab.src ='../sounds/knife slash sound effect.mp3'
+backgroundMusic.src='../sounds/Sneaky Snitch (Kevin MacLeod) - Gaming Background Music (HD).mp3';
 let clicked=0;
 $( function() {
     $( ".parts").draggable({
@@ -172,6 +174,7 @@ function pad(val) {
     }
 }
 function startTimer(){
+    backgroundMusic.play();
     isPaused=false;
     if(clicked===0){
         setInterval(setTime, 1000);
@@ -179,6 +182,7 @@ function startTimer(){
     }
 }
 function pauseTimer(){
+    backgroundMusic.pause();
     isPaused=true;
 }
 
@@ -224,7 +228,16 @@ function changeVolume(){
     for (let i =0;i<sounds.length;i++){
         sounds[i].volume=number;
     }
+    if(number===0){
+        backgroundMusic.pause();
+
+    }else{
+        backgroundMusic.volume=0.1;
+        backgroundMusic.play();
+    }
 }
+changeVolume(0.5);
+
 
 
 
