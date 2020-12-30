@@ -1,0 +1,100 @@
+.sidebar{
+    display: none;
+}
+
+body, .middle{
+    font-family: times;
+    background-color: #ffffff;
+}
+
+.noPrint{
+    display: none;
+}
+
+.subpageTitle{
+    text-decoration: none;
+    text-align: center;
+    color: #FF0000;
+}
+
+#check, #btn, #cancel{
+    display: none;
+}
+
+footer{
+    display: none;
+}
+
+.cookiesDiv{
+    display: none;
+}
+
+.imageShow{
+    display: none;
+}
+
+pocet-navstev{
+    position: fixed;
+    /*bottom: -16px;*/
+    bottom: 8px;
+    right: 10px;
+    color: #333333;
+}
+
+h3{
+    color: blue;
+}
+
+.noStyle{
+    text-decoration: none;
+}
+
+.mainTitle{
+    list-style: none;
+    padding-left: 20px;
+    color: red;
+    text-align: center;
+}
+
+#mttl{
+    color: red;
+    text-align: center;
+}
+
+#nameDay, #time, #feastDay{
+    display: none;
+}
+
+#historia{
+    display: none;
+}
+
+.obrazok{
+    max-width: 95%;
+    max-height: 95%;
+}
+
+td{
+    border: 2px solid #333333;
+    text-align: center;
+}
+
+th{
+    border: 2px solid #333333;
+    text-align: center;
+}
+
+table{
+    border: 4px solid #333333;
+    border-radius: 6px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+input {
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
