@@ -1,4 +1,89 @@
 
+//komponent menin
+class MeninyComponent extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="container">
+            <p class="h1">Meniny</p>
+            <br>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="nameS" value="option1" checked>
+                <label class="form-check-label" for="nameS">
+                    Vyhlaďanie poďla mena
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="dateS" value="option2">
+                <label class="form-check-label" for="dateS">
+                    Vyhlaďanie poďla dátumu
+                </label>
+            </div>
+
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios2" id="slovakia" value="option1" checked>
+                <label class="form-check-label" for="slovakia">
+                    Slovenské meniny
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios2" id="czechia" value="option2">
+                <label class="form-check-label" for="czechia">
+                    České meniny
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios2" id="hungary" value="option3">
+                <label class="form-check-label" for="hungary">
+                    Maďarské meniny
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios2" id="poland" value="option4">
+                <label class="form-check-label" for="poland">
+                    Poľské meniny
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios2" id="austria" value="option5">
+                <label class="form-check-label" for="austria">
+                    Rakúske meniny
+                </label>
+            </div>
+
+            <br>
+
+            <div id="namesDiv">
+                <label class="form-label" for="myInput"> Meno</label>
+                <br>
+
+                        <div class="autocomplete">
+                            <input id="myInput" type="text" name="myCountry" placeholder="Meno">
+                        </div>
+
+            </div>
+            <div id="dateDiv">
+                <label class="form-label" for="dateInput">Dátum</label>
+                <br>
+                <input id="dateInput" type="date">
+
+            </div>
+            <input id="btn" type="submit" onclick="afterClick()">
+            <div id="result">
+
+            </div>
+
+        </div>`;
+    }
+}
+
+
+if (!customElements.get('meniny-component')) {
+    customElements.define('meniny-component', MeninyComponent);
+}
+
+
 // load xml file
 if (window.XMLHttpRequest) {
     xhttp = new XMLHttpRequest();
@@ -9,201 +94,208 @@ if (window.XMLHttpRequest) {
 xhttp.open("GET", "../xmlFiles/meniny.xml", false);
 xhttp.send();
 xmlDoc = xhttp.responseXML;
-let slovakian = [];let czechia = [];let hungary = [];let poland = [];let austria = [];
-let slovakianNames = [];let czechiaNames = [];let hungaryNames = [];let polandNames = [];let austriaNames = [];
-let skTag=xmlDoc.getElementsByTagName("SK");let czTag=xmlDoc.getElementsByTagName("CZ");
-let huTag=xmlDoc.getElementsByTagName("HU");
-let plTag=xmlDoc.getElementsByTagName("PL");let atTag=xmlDoc.getElementsByTagName("AT");
+let slovakian = [];
+let czechia = [];
+let hungary = [];
+let poland = [];
+let austria = [];
+let slovakianNames = [];
+let czechiaNames = [];
+let hungaryNames = [];
+let polandNames = [];
+let austriaNames = [];
+let skTag = xmlDoc.getElementsByTagName("SK");
+let czTag = xmlDoc.getElementsByTagName("CZ");
+let huTag = xmlDoc.getElementsByTagName("HU");
+let plTag = xmlDoc.getElementsByTagName("PL");
+let atTag = xmlDoc.getElementsByTagName("AT");
 
 let name;
 let nameSplit;
-let j,i;
+let j, i;
 let dateDiv = document.getElementById("dateDiv");
 let nameDiv = document.getElementById("namesDiv");
 let dateAfterChange;
-let inputName,inputDate;
-let choice=1;
+let inputName, inputDate;
+let choice = 1;
 
 
-
-
-
-nameDiv.style.display="block";
-dateDiv.style.display="none";
+nameDiv.style.display = "block";
+dateDiv.style.display = "none";
 //nacitanie do pola
-loadArrays(skTag,slovakian,slovakianNames);
-loadArrays(czTag,czechia,czechiaNames);
-loadArrays(huTag,hungary,hungaryNames);
-loadArrays(atTag,austria,austriaNames);
-loadArrays(plTag,poland,polandNames);
+loadArrays(skTag, slovakian, slovakianNames);
+loadArrays(czTag, czechia, czechiaNames);
+loadArrays(huTag, hungary, hungaryNames);
+loadArrays(atTag, austria, austriaNames);
+loadArrays(plTag, poland, polandNames);
 let tag = "SK"
-let arr=slovakian;
-let names=slovakianNames;
+let arr = slovakian;
+let names = slovakianNames;
 autocomplete(document.getElementById("myInput"), arr);
-function loadArrays(nameTag,arr,names){
-    for(i=0;i<nameTag.length;i++){
+
+function loadArrays(nameTag, arr, names) {
+    for (i = 0; i < nameTag.length; i++) {
         name = nameTag[i].childNodes[0].nodeValue;
         names.push(nameTag[i].childNodes[0].nodeValue);
         nameSplit = name.split(", ");
-        if(nameSplit.length>1){
-            for (j = 0; j<nameSplit.length;j++){
+        if (nameSplit.length > 1) {
+            for (j = 0; j < nameSplit.length; j++) {
                 arr.push(nameSplit[j]);
             }
-        }else {
+        } else {
             arr.push(nameTag[i].childNodes[0].nodeValue);
         }
     }
 }
-$('input[type=radio][name=radios]').change(function() {
+
+$('input[type=radio][name=radios]').change(function () {
     if (this.value === 'option1') {
-        nameDiv.style.display="block";
-        dateDiv.style.display="none";
-        choice=1;
-    }
-    else if (this.value === 'option2') {
-        nameDiv.style.display="none";
-        dateDiv.style.display="block";
-        choice=2;
+        nameDiv.style.display = "block";
+        dateDiv.style.display = "none";
+        choice = 1;
+    } else if (this.value === 'option2') {
+        nameDiv.style.display = "none";
+        dateDiv.style.display = "block";
+        choice = 2;
     }
 });
-$('input[type=radio][name=radios2]').change(function() {
+$('input[type=radio][name=radios2]').change(function () {
     if (this.value === 'option1') {
-        arr=slovakian;
-        names=slovakianNames;
-        tag="SK"
+        arr = slovakian;
+        names = slovakianNames;
+        tag = "SK"
         autocomplete(document.getElementById("myInput"), arr);
-    }
-    else if (this.value === 'option2') {
-        arr=czechia;
-        names=czechiaNames;
-        tag="CZ"
+    } else if (this.value === 'option2') {
+        arr = czechia;
+        names = czechiaNames;
+        tag = "CZ"
         autocomplete(document.getElementById("myInput"), arr);
-    }
-    else if (this.value === 'option3') {
-        arr=hungary;
-        names=hungaryNames;
-        tag="HU"
+    } else if (this.value === 'option3') {
+        arr = hungary;
+        names = hungaryNames;
+        tag = "HU"
         autocomplete(document.getElementById("myInput"), arr);
-    }
-    else if (this.value === 'option4') {
-        arr=poland;
-        names=polandNames;
-        tag="PL"
+    } else if (this.value === 'option4') {
+        arr = poland;
+        names = polandNames;
+        tag = "PL"
         autocomplete(document.getElementById("myInput"), arr);
-    }
-    else if (this.value === 'option5') {
-        arr=austria;
-        names=austriaNames;
-        tag="AT"
+    } else if (this.value === 'option5') {
+        arr = austria;
+        names = austriaNames;
+        tag = "AT"
         autocomplete(document.getElementById("myInput"), arr);
     }
 });
 
 
-function afterClick(){
+function afterClick() {
     let found;
-    if(choice===1){
+    if (choice === 1) {
         let compareString1;
         let compareString2;
-    inputName = document.getElementById("myInput").value;
+        inputName = document.getElementById("myInput").value;
 
-    let firstName;
-    inputName = inputName+"";
-    for (i=0;i<names.length;i++){
-        compareString1=names[i].split(",")
-        compareString2=inputName.toLocaleLowerCase();
-        compareString2=replace(compareString2);
-        for (j = 0;j<compareString1.length;j++){
-            compareString1[j]=compareString1[j].toLocaleLowerCase();
-            compareString1[j]=replace(compareString1[j]);
+        let firstName;
+        inputName = inputName + "";
+        for (i = 0; i < names.length; i++) {
+            compareString1 = names[i].split(",")
+            compareString2 = inputName.toLocaleLowerCase();
+            compareString2 = replace(compareString2);
+            for (j = 0; j < compareString1.length; j++) {
+                compareString1[j] = compareString1[j].toLocaleLowerCase();
+                compareString1[j] = replace(compareString1[j]);
 
-            if(compareString1[j]===compareString2){
-                inputName=names[i];
-                firstName=names[i];
-                found = 1;
-                break;
+                if (compareString1[j] === compareString2) {
+                    inputName = names[i];
+                    firstName = names[i];
+                    found = 1;
+                    break;
+                }
             }
-        }
 
-    }
-    if (found!==1){
-        document.getElementById("myInput").style.background="red";
-        document.getElementById("result").innerHTML = "<span class='alert'>"+'ZLÉ MENO'+"</span>";
-        return 0;
-    }
-        document.getElementById("myInput").style.background="green";
-    let dateBeforeChange=searchXML(inputName,1,tag);
-    let first,second,third,forth;
-    dateBeforeChange.split("");
-    if(dateBeforeChange[0]==="0"){
-        first="";
-    }else {
-        first=dateBeforeChange[0];
-    }
-    if(dateBeforeChange[2]==="0"){
-        third="";
-    }else {
-        third=dateBeforeChange[2];
-    }
-    second=dateBeforeChange[1]
-    forth=dateBeforeChange[3]
-    dateAfterChange = third+forth+"."+first+second+".";
-    document.getElementById("result").innerHTML = "<span class='bold'>"+firstName+"</span> má meniny "+
-        "<span class='bold'>"+dateAfterChange+"</span>";
-    }
-    else{
-        inputDate = document.getElementById("dateInput").value;
-        if (!inputDate){
-            document.getElementById("dateInput").style.background="red";
-            document.getElementById("result").innerHTML = "<span class='alert'>"+'ZLÝ DÁTUM'+"</span>";
+        }
+        if (found !== 1) {
+            document.getElementById("myInput").style.background = "red";
+            document.getElementById("result").innerHTML = "<span class='alert'>" + 'ZLÉ MENO' + "</span>";
             return 0;
         }
-        document.getElementById("dateInput").style.background="green";
+        document.getElementById("myInput").style.background = "green";
+        let dateBeforeChange = searchXML(inputName, 1, tag);
+        let first, second, third, forth;
+        dateBeforeChange.split("");
+        if (dateBeforeChange[0] === "0") {
+            first = "";
+        } else {
+            first = dateBeforeChange[0];
+        }
+        if (dateBeforeChange[2] === "0") {
+            third = "";
+        } else {
+            third = dateBeforeChange[2];
+        }
+        second = dateBeforeChange[1]
+        forth = dateBeforeChange[3]
+        dateAfterChange = third + forth + "." + first + second + ".";
+        document.getElementById("result").innerHTML = "<span class='bold'>" + firstName + "</span> má meniny " +
+            "<span class='bold'>" + dateAfterChange + "</span>";
+    } else {
+        inputDate = document.getElementById("dateInput").value;
+        if (!inputDate) {
+            document.getElementById("dateInput").style.background = "red";
+            document.getElementById("result").innerHTML = "<span class='alert'>" + 'ZLÝ DÁTUM' + "</span>";
+            return 0;
+        }
+        document.getElementById("dateInput").style.background = "green";
         let date = inputDate.split("-");
         //console.log(date[1]); mesiac
         //console.log(date[2]); den
-        let formattedDate = date[1]+date[2];
-        let name = searchXML(formattedDate,3,tag);
-        if(name==="Dnes nemá nikto meniny"){
-            name="nikto";
+        let formattedDate = date[1] + date[2];
+        let name = searchXML(formattedDate, 3, tag);
+        if (name === "Dnes nemá nikto meniny") {
+            name = "nikto";
         }
-        document.getElementById("result").innerHTML = "<span class='bold'>"+date[2]+"."+date[1]+"."+"</span> má meniny "+
-            "<span class='bold'>"+name+"</span>";
+        document.getElementById("result").innerHTML = "<span class='bold'>" + date[2] + "." + date[1] + "." + "</span> má meniny " +
+            "<span class='bold'>" + name + "</span>";
 
     }
 }
-function replace(string){
-    string = string.replace(new RegExp(/\s/g),"");
-    string = string.replace(new RegExp(/[àáâãäå]/g),"a");
-    string = string.replace(new RegExp(/[šś]/g),"s");
-    string = string.replace(new RegExp(/[ŕř]/g),"r");
-    string = string.replace(new RegExp(/[ť]/g),"t");
-    string = string.replace(new RegExp(/[ď]/g),"d");
-    string = string.replace(new RegExp(/[ľĺ]/g),"l");
-    string = string.replace(new RegExp(/[ňń]/g),"n");
-    string = string.replace(new RegExp(/æ/g),"ae");
-    string = string.replace(new RegExp(/çčć/g),"c");
-    string = string.replace(new RegExp(/[èéêëě]/g),"e");
-    string = string.replace(new RegExp(/[ìíîï]/g),"i");
-    string = string.replace(new RegExp(/ñ/g),"n");
-    string = string.replace(new RegExp(/[òóôõö]/g),"o");
-    string = string.replace(new RegExp(/œ/g),"oe");
-    string = string.replace(new RegExp(/[ùúûü]/g),"u");
-    string = string.replace(new RegExp(/[ýÿ]/g),"y");
-    string = string.replace(new RegExp(/[žź]/g),"z");
-    string = string.replace(new RegExp(/\W/g),"");
+
+function replace(string) {
+    string = string.replace(new RegExp(/\s/g), "");
+    string = string.replace(new RegExp(/[àáâãäå]/g), "a");
+    string = string.replace(new RegExp(/[šś]/g), "s");
+    string = string.replace(new RegExp(/[ŕř]/g), "r");
+    string = string.replace(new RegExp(/[ť]/g), "t");
+    string = string.replace(new RegExp(/[ď]/g), "d");
+    string = string.replace(new RegExp(/[ľĺ]/g), "l");
+    string = string.replace(new RegExp(/[ňń]/g), "n");
+    string = string.replace(new RegExp(/æ/g), "ae");
+    string = string.replace(new RegExp(/çčć/g), "c");
+    string = string.replace(new RegExp(/[èéêëě]/g), "e");
+    string = string.replace(new RegExp(/[ìíîï]/g), "i");
+    string = string.replace(new RegExp(/ñ/g), "n");
+    string = string.replace(new RegExp(/[òóôõö]/g), "o");
+    string = string.replace(new RegExp(/œ/g), "oe");
+    string = string.replace(new RegExp(/[ùúûü]/g), "u");
+    string = string.replace(new RegExp(/[ýÿ]/g), "y");
+    string = string.replace(new RegExp(/[žź]/g), "z");
+    string = string.replace(new RegExp(/\W/g), "");
     return string;
 }
+
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     let currentFocus;
     /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
+    inp.addEventListener("input", function (e) {
         let a, b, i, val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
-        if (!val) { return false;}
+        if (!val) {
+            return false;
+        }
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
         a = document.createElement("DIV");
@@ -223,7 +315,7 @@ function autocomplete(inp, arr) {
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                 /*execute a function when someone clicks on the item value (DIV element):*/
-                b.addEventListener("click", function(e) {
+                b.addEventListener("click", function (e) {
                     /*insert the value for the autocomplete text field:*/
                     inp.value = this.getElementsByTagName("input")[0].value;
                     /*close the list of autocompleted values,
@@ -235,7 +327,7 @@ function autocomplete(inp, arr) {
         }
     });
     /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
+    inp.addEventListener("keydown", function (e) {
         let x = document.getElementById(this.id + "autocomplete-list");
         if (x) x = x.getElementsByTagName("div");
         if (e.keyCode === 40) {
@@ -259,6 +351,7 @@ function autocomplete(inp, arr) {
             }
         }
     });
+
     function addActive(x) {
         /*a function to classify an item as "active":*/
         if (!x) return false;
@@ -269,12 +362,14 @@ function autocomplete(inp, arr) {
         /*add class "autocomplete-active":*/
         x[currentFocus].classList.add("autocomplete-active");
     }
+
     function removeActive(x) {
         /*a function to remove the "active" class from all autocomplete items:*/
         for (let i = 0; i < x.length; i++) {
             x[i].classList.remove("autocomplete-active");
         }
     }
+
     function closeAllLists(elmnt) {
         /*close all autocomplete lists in the document,
         except the one passed as an argument:*/
@@ -285,6 +380,7 @@ function autocomplete(inp, arr) {
             }
         }
     }
+
     /*execute a function when someone clicks in the document:*/
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
