@@ -34,14 +34,6 @@ footer{
     display: none;
 }
 
-pocet-navstev{
-    position: fixed;
-    /*bottom: -16px;*/
-    bottom: 8px;
-    right: 10px;
-    color: #333333;
-}
-
 h3{
     color: blue;
 }
@@ -105,4 +97,13 @@ body{
 * {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
     color-adjust: exact !important;                 /*Firefox*/
+}
+
+pocet-navstev{
+    z-index: -100;
+    position: fixed;
+    /*bottom: -16px;*/
+    bottom: 8px;
+    right: 10px;
+    color: #000000;
 }
