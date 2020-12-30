@@ -32,12 +32,14 @@ $(document).ready(function (){
     let y = document.createElement("ol");
     y.setAttribute("class","breadcrumb");
 
+    var pocet = pocetStranok(pole.length);
+
    // pridavanie stranok
-    for(var i=0; i<=pole.length;i++){
+    for(pocet; pocet<pole.length;pocet++){
         let z = document.createElement("li");
         z.setAttribute("class","breadcrumb-item");
 
-        var stranka = pridanieStranky(pole[i]);
+        var stranka = pridanieStranky(pole[pocet]);
         /*let stranka = document.createElement("a");
         stranka.setAttribute("href",pole[i]);
         stranka.innerText=pole[i];*/
@@ -52,6 +54,15 @@ $(document).ready(function (){
 
 });
 
+function pocetStranok(dlzka){
+    var vypocet = 0;
+    if (dlzka>5){
+        vypocet = dlzka - 5;
+    }
+
+    return vypocet;
+}
+
 function pridanieStranky(titul) {
 
     let novaStranka = document.createElement("a");
@@ -64,10 +75,10 @@ function pridanieStranky(titul) {
     else if (titul === "Erik's HTML"){
         novaStranka.setAttribute("href","../html/erikHTML.html");
     }
-    else if (titul === "Petrove HTML"){
-        novaStranka.setAttribute("href","../html/peterHTML.html");
+    else if (titul === "Counter Strike"){
+        novaStranka.setAttribute("href","../html/counterStrikeGame.html");
     }
-    else if (titul === "name days"){
+    else if (titul === "Meniny"){
         novaStranka.setAttribute("href","../html/nameDays.html");
     }
     else if (titul === "O nás"){
