@@ -86,7 +86,7 @@ function isDropOk(event,ui){
             grenadeOut.play();
         }
         if(b==="sipka"){
-            roundDraw.play();
+            famas.play();
         }
         if(b==="zbran"){
             desertEagle.play();
@@ -130,6 +130,7 @@ function allDropsCorrect(){
         }
     }
     if(count===11){
+        backgroundMusic.pause();
         wonRound.play();
         isPaused=true;
         $('#picture').append("<p class='result'>Víťazstvo, gratulujeme! <br> zvládli ste to za tento čas : "+pad(parseInt(totalSeconds / 60)+":"+pad(totalSeconds % 60)+"</p>"));
