@@ -203,3 +203,11 @@ pocet-navstev{
     left: 10px;
     color: #333333;
 }
+
+.cookiesStyle{
+    float: left;
+}
+
+#cookiesDiv{
+    display: none;
+}
