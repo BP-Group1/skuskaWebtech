@@ -1,3 +1,4 @@
+/**     name days   **/
 let currentDate=null;
 let hours,minutes,seconds;
 let datetime=null;
@@ -121,8 +122,9 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
         return 'Meniny má <span class="name">'+divText+'</span>'
     }
 }
+/*     name days   */
 
-
+/**     time and date   **/
 function updateHours(currentHour){
     if(currentHour.getHours()<10){
         hours="0"+ currentHour.getHours();
@@ -165,7 +167,9 @@ function updateDate(){
         + seconds;
     //console.log(datetime);
 }
+/*     time and date   */
 
+/**     sidebar   **/
 //menu pomocou komponentu
 class sideBar extends HTMLElement {
     connectedCallback() {
@@ -208,13 +212,13 @@ class sideBar extends HTMLElement {
                     </li>
                    <!-- <li>
                         <a href="#"><i class="fas fa-link"></i>Shortcuts</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="../html/about.html"><i class="far fa-question-circle"></i>O nás</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
-                    </li>
+                    </li><!--
                     <li>
                         <a href="#"><i class="far fa-envelope"></i>Contact</a>
                     </li> -->
@@ -240,8 +244,9 @@ function showUnderGames(){
         }
     }
 }
+/*     sidebar   */
 
-
+/**     access counter   **/
 //storage pocet pristupov na stranky
 window.localStorage;
 var pocetPristupov = localStorage.getItem('pocet');
@@ -264,10 +269,9 @@ class pocetNavstev extends HTMLElement {
         Naše stránky si navštívil spolu: ${pocetPristupov}-krát 😃 
            </p> `;
     }
-
 }
 
 if (!customElements.get('pocet-navstev')) {
     customElements.define('pocet-navstev', pocetNavstev);
 }
-
+/*     access counter   */

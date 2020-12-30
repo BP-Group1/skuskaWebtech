@@ -199,8 +199,8 @@ pocet-navstev{
 
 #historia{
     position: fixed;
-    bottom: 8px;
-    left: 10px;
+    top: 70px;
+    right: 10px;
     color: #333333;
 }
 

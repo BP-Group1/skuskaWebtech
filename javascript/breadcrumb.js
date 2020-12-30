@@ -32,6 +32,7 @@ $(document).ready(function (){
     let y = document.createElement("ol");
     y.setAttribute("class","breadcrumb");
 
+
     var pocet = pocetStranok(pole.length);
 
    // pridavanie stranok
@@ -47,11 +48,7 @@ $(document).ready(function (){
         y.appendChild(z).appendChild(stranka);
     }
 
-
-
     document.getElementById("historia").appendChild(y);
-
-
 });
 
 function pocetStranok(dlzka){
@@ -66,6 +63,7 @@ function pocetStranok(dlzka){
 function pridanieStranky(titul) {
 
     let novaStranka = document.createElement("a");
+
     if (titul === "Skuska Webtech"){
         novaStranka.setAttribute("href","../html/index.html");
     }
@@ -91,24 +89,6 @@ function pridanieStranky(titul) {
     novaStranka.setAttribute("href","https://www.fei.stuba.sk/");
     novaStranka.innerText=titul;
 
-    /*
-    switch(titul){
-    case "Skuska Webtech":
-        novaStranka.setAttribute("href","../html/index.html"); brake;
-    case "Lukasove HTML":
-        novaStranka.setAttribute("href","../html/lukasHTML.html"); brake;
-    case "Erik's HTML":
-        novaStranka.setAttribute("href","../html/erikHTML.htm"); brake;
-    case "Petrove HTML":
-        novaStranka.setAttribute("href","../html/peterHTML.html"); brake;
-    case "name days":
-        novaStranka.setAttribute("href","../html/nameDays.html"); brake;
-    case "O nás":
-        novaStranka.setAttribute("href","../html/about.html"); brake;
-    case "Chcecklist":
-        novaStranka.setAttribute("href","../html/checklist.html"); brake;
-    }
-    */
 
     return novaStranka;
 }
