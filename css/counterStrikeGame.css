@@ -316,6 +316,9 @@
 #ruskoH{
   visibility: hidden;
 }
+#volume{
+  width: 20%;
+}
 @media screen and (max-width: 810px){
   #bombDrop{left: 82.20%;}
 }
@@ -334,6 +337,7 @@
   }
 }
 @media screen and (max-height: 450px){
+
   #timer{
     top: 19%!important;
   }
@@ -351,6 +355,9 @@
 @media screen and (max-width: 400px){
   #timer{
     top: 9%;
+  }
+  #volume{
+    width: 30%!important;
   }
   #bombDrop{left: 81.7%;
     top: 63%;}
@@ -407,3 +414,14 @@
 .bold{
   font-weight: bold;
 }
+.volume{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+.volumeLabel{
+  width: 15%;
+  height: 15%;
+}
+
+
