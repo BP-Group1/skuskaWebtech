@@ -283,3 +283,4 @@ document.getElementById("btn").addEventListener('click', function (){
 document.getElementById("cancel").addEventListener('click', function (){
     document.getElementById("historia").style.display = "none";
 });
+/*     history     */
