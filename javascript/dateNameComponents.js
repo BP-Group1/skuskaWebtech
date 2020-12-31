@@ -216,9 +216,9 @@ class sideBar extends HTMLElement {
                     <li>
                         <a href="../html/about.html"><i class="far fa-question-circle"></i>O nás</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
-                    </li><!--
+                    </li>--><!--
                     <li>
                         <a href="#"><i class="far fa-envelope"></i>Contact</a>
                     </li> -->

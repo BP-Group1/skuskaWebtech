@@ -4,75 +4,91 @@ class MeninyComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div class="container">
+        <div class="row middle">
             <p class="h1">Meniny</p>
+
+            <div class="column1 col-lg-4">
+                        <br>
+            <br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="nameS" value="option1" checked>
+                    <label class="form-check-label" for="nameS">
+                        Vyhlaďanie poďla mena
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="dateS" value="option2">
+                    <label class="form-check-label" for="dateS">
+                        Vyhlaďanie poďla dátumu
+                    </label>
+                </div>
+            </div>
+            
+
+            
+            <div class="col-lg-4">
             <br>
             <br>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="nameS" value="option1" checked>
-                <label class="form-check-label" for="nameS">
-                    Vyhlaďanie poďla mena
-                </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios2" id="slovakia" value="option1" checked>
+                    <label class="form-check-label" for="slovakia">
+                        Slovenské meniny
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios2" id="czechia" value="option2">
+                    <label class="form-check-label" for="czechia">
+                        České meniny
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios2" id="hungary" value="option3">
+                    <label class="form-check-label" for="hungary">
+                        Maďarské meniny
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios2" id="poland" value="option4">
+                    <label class="form-check-label" for="poland">
+                        Poľské meniny
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios2" id="austria" value="option5">
+                    <label class="form-check-label" for="austria">
+                        Rakúske meniny
+                    </label>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="dateS" value="option2">
-                <label class="form-check-label" for="dateS">
-                    Vyhlaďanie poďla dátumu
-                </label>
-            </div>
+            
 
+            
+            <div class="column3 col-lg-4">
             <br>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios2" id="slovakia" value="option1" checked>
-                <label class="form-check-label" for="slovakia">
-                    Slovenské meniny
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios2" id="czechia" value="option2">
-                <label class="form-check-label" for="czechia">
-                    České meniny
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios2" id="hungary" value="option3">
-                <label class="form-check-label" for="hungary">
-                    Maďarské meniny
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios2" id="poland" value="option4">
-                <label class="form-check-label" for="poland">
-                    Poľské meniny
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios2" id="austria" value="option5">
-                <label class="form-check-label" for="austria">
-                    Rakúske meniny
-                </label>
-            </div>
-
             <br>
-
-            <div id="namesDiv">
-                <label class="form-label" for="myInput"> Meno</label>
-                <br>
-
-                        <div class="autocomplete">
-                            <input id="myInput" type="text" name="myCountry" placeholder="Meno">
-                        </div>
-
+            
+                <div id="namesDiv">
+                    <!--<label class="form-label" for="myInput"> Meno</label>-->
+                    
+    
+                    <div class="autocomplete col-12 col-sm-5 col-md-5 col-lg-12">
+                        <input id="myInput" type="text" name="myCountry" placeholder="Meno">
+                    </div>
+    
+                </div>
+                <div id="dateDiv">
+                    <!--<label class="form-label" for="dateInput">Dátum</label>-->
+                    
+                    <input class="col-12 col-sm-5 col-md-5 col-lg-12" id="dateInput" type="date">
+    
+                </div>
+                <input class="col-12 col-sm-5 col-md-5 col-lg-12" id="btn" type="submit" onclick="afterClick()">
+                <div id="result">
+    
+                </div>
             </div>
-            <div id="dateDiv">
-                <label class="form-label" for="dateInput">Dátum</label>
-                <br>
-                <input id="dateInput" type="date">
-
             </div>
-            <input id="btn" type="submit" onclick="afterClick()">
-            <div id="result">
 
-            </div>
 
         </div>`;
     }
