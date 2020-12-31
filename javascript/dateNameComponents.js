@@ -285,6 +285,7 @@ document.getElementById("cancel").addEventListener('click', function (){
 });
 /*     history     */
 
+/**     Tooltip     **/
 document.getElementById("eGame").addEventListener('mousemove', function (){
     document.getElementById("stiloImgC").style.display = "block";
 });
@@ -303,3 +304,4 @@ document.getElementById("pGame").addEventListener('mousemove', function (){
 document.getElementById("pGame").addEventListener('mouseleave', function (){
     document.getElementById("counterStrikeImgC").style.display = "none";
 });
+/*     Tooltip     */
