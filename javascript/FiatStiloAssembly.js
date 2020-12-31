@@ -70,5 +70,13 @@ function stop() {
 }
 
 document.getElementById("gin").addEventListener('click', function (){
-    window.history.go(0);
+    location.reload();
+    document.getElementById("layer").style.display = "none";
+});
+
+document.getElementById("iks").addEventListener('click', function (){
+    document.getElementById("layer").style.display = "none";
+});
+document.getElementById("man").addEventListener('click', function (){
+    document.getElementById("layer").style.display = "block";
 });

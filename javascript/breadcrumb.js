@@ -71,7 +71,7 @@ function pridanieStranky(titul) {
         novaStranka.setAttribute("href","../html/lukasHTML.html");
     }
     else if (titul === "Erik's HTML"){
-        novaStranka.setAttribute("href","../html/erikHTML.html");
+        novaStranka.setAttribute("href","../html/FiatStiloAssembly.html");
     }
     else if (titul === "Counter Strike"){
         novaStranka.setAttribute("href","../html/counterStrikeGame.html");
