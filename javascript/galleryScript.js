@@ -1,24 +1,6 @@
 //vytvoreny kvoli errorom na nasich strankach
 //lebo sa tam nepouzivaju funkcie co su v indexe a blbne to potom
 
-document.getElementById("eGame").addEventListener('mousemove', function (){
-    document.getElementById("stiloImg").style.display = "block";
-});
-document.getElementById("eGame").addEventListener('mouseleave', function (){
-    document.getElementById("stiloImg").style.display = "none";
-});
-document.getElementById("lGame").addEventListener('mousemove', function (){
-    document.getElementById("transformersImg").style.display = "block";
-});
-document.getElementById("lGame").addEventListener('mouseleave', function (){
-    document.getElementById("transformersImg").style.display = "none";
-});
-document.getElementById("pGame").addEventListener('mousemove', function (){
-    document.getElementById("counterStrikeImg").style.display = "block";
-});
-document.getElementById("pGame").addEventListener('mouseleave', function (){
-    document.getElementById("counterStrikeImg").style.display = "none";
-});
 
 
 

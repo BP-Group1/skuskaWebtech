@@ -200,7 +200,7 @@ class sideBar extends HTMLElement {
                             </li>
 
                             <li id="eGame">
-                                <a href="../html/erikHTML.html"><i class="fas fa-qrcode"></i>Erik hra</a>
+                                <a href="../html/FiatStiloAssembly.html"><i class="fas fa-qrcode"></i>Erik hra</a>
                             </li>
                         </ul>
                     </li>
@@ -216,9 +216,9 @@ class sideBar extends HTMLElement {
                     <li>
                         <a href="../html/about.html"><i class="far fa-question-circle"></i>O nás</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="#"><i class="fas fa-sliders-h"></i>Services</a>
-                    </li><!--
+                    </li>--><!--
                     <li>
                         <a href="#"><i class="far fa-envelope"></i>Contact</a>
                     </li> -->
@@ -284,3 +284,24 @@ document.getElementById("cancel").addEventListener('click', function (){
     document.getElementById("historia").style.display = "none";
 });
 /*     history     */
+
+/**     Tooltip     **/
+document.getElementById("eGame").addEventListener('mousemove', function (){
+    document.getElementById("stiloImgC").style.display = "block";
+});
+document.getElementById("eGame").addEventListener('mouseleave', function (){
+    document.getElementById("stiloImgC").style.display = "none";
+});
+document.getElementById("lGame").addEventListener('mousemove', function (){
+    document.getElementById("transformersImgC").style.display = "block";
+});
+document.getElementById("lGame").addEventListener('mouseleave', function (){
+    document.getElementById("transformersImgC").style.display = "none";
+});
+document.getElementById("pGame").addEventListener('mousemove', function (){
+    document.getElementById("counterStrikeImgC").style.display = "block";
+});
+document.getElementById("pGame").addEventListener('mouseleave', function (){
+    document.getElementById("counterStrikeImgC").style.display = "none";
+});
+/*     Tooltip     */

@@ -222,16 +222,57 @@ h1{
     top: 75px;
 }
 
-#gin{
+#gin{/* checkEnGIN   */
     position: absolute;
     top: 3px;
     left: 300px;
     cursor: pointer;
 }
 
-#man{
+#man{/* MANual      */
     position: absolute;
     top: 3px;
     left: 400px;
     cursor: pointer;
+}
+
+#layer{
+    z-index: 100;
+    background-color: #333333;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 99%;
+}
+
+#iks{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.spaceAlign{
+    width: 27px;
+    float: left;
+}
+
+#instructions{
+    color: snow;
+}
+
+#ic2{
+    margin-right: 27px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.larger{
+    font-size: x-large;
 }
