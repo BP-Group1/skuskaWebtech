@@ -36,8 +36,22 @@ h1 {
     width: 409px;
     height: 142px;
 
-}
 
+}
+/*
+#rukaB{
+
+    position: absolute;
+    animation: rukaBAnime 5s linear 2s infinite alternate;
+}
+@keyframes rukaBAnime {
+    25% { left: 550px; top: 1000px;}
+    50% { left: 550px; top: 320px }
+    75% { left:600px;  top:300px;}
+    to  { left:632px;  top:257px;}
+
+}
+*/
 #rukaBOK {
     position: absolute;
     left: 632px;
@@ -137,6 +151,7 @@ button{
     top: 0;
     align-items: center;
     text-align: center;
+    padding-bottom: 50px;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -144,6 +159,7 @@ button{
     font-size: large;
     background-color: rgba(0,0,0,0.9);
 }
+
 
 #animacia{
     height:80%;
@@ -154,4 +170,44 @@ button{
 }
 #tlacidlo2{
     background-color: fuchsia;
+}
+#tlacidlo3{
+    background-color: crimson;
+}
+
+#close2{
+    background-image: url("../img/icons/close.png");
+    background-color: red;
+    top: 10px;
+    right: 10px;
+}
+h2{
+    float: left;
+
+    color: red;
+}
+#navod{
+     display: none;
+     position: fixed;
+     z-index: 1;
+     padding-top: 100px;
+     left: 0;
+     top: 0;
+     align-items: center;
+     text-align: center;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     color: white;
+     font-size: large;
+     background-color: rgba(0,0,0,0.9);
+ }
+
+#navodik{
+    position: fixed;
+    text-align: left;
+    left: 145px;
+}
+span{
+    color: blue;
 }
