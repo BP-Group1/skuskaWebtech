@@ -1,6 +1,5 @@
 /**     name days   **/
 let currentDate=null;
-let hours,minutes,seconds;
 let datetime=null;
 // date
 let xhttp,xmlDoc,x,input,size,SKsviatky,SK,divText,startString;
@@ -120,34 +119,6 @@ function searchXML(inp,choice,tag)// choice 1 je dátum 2 je sviatok,3 je meno d
         return 'Meniny má <span class="name">'+divText+'</span>'
     }
 }
-/*     name days   */
-
-/**     time and date   **/
-function updateHours(currentHour){
-    if(currentHour.getHours()<10){
-        hours="0"+ currentHour.getHours();
-    }
-    else {
-        hours = currentHour.getHours();
-    }
-}
-function updateMin(currentMin){
-    if(currentMin.getMinutes()<10){
-        minutes="0"+ currentMin.getMinutes();
-    }
-    else {
-        minutes = currentMin.getMinutes();
-    }
-}
-
-function updateSec(currentSec){
-    if(currentSec.getSeconds()<10){
-        seconds="0"+ currentSec.getSeconds();
-    }
-    else {
-        seconds = currentSec.getSeconds();
-    }
-}
 
 
 function updateDate(){
@@ -157,9 +128,6 @@ function updateDate(){
 
     document.getElementById("nameDay").innerHTML = searchXML(checkDandM(d,m),0,"SK");
 
-    updateHours(currentDate)
-    updateMin(currentDate)
-    updateSec(currentDate)
 
     datetime = currentDate.toLocaleString();
     //console.log(datetime);
