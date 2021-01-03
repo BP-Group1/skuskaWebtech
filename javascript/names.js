@@ -13,13 +13,13 @@ class MeninyComponent extends HTMLElement {
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="radios" id="nameS" value="option1" checked>
                     <label class="form-check-label" for="nameS">
-                        Vyhlaďanie poďla mena
+                        Vyhľadanie poďla mena
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="radios" id="dateS" value="option2">
                     <label class="form-check-label" for="dateS">
-                        Vyhlaďanie poďla dátumu
+                        Vyhľadanie poďla dátumu
                     </label>
                 </div>
             </div>
