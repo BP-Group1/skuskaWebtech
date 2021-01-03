@@ -15,18 +15,18 @@ body {
   left: -250px;
   width: 250px;
   height: 90.5%;
-  background: #042331;
+  background: #4d4d4d;
   transition: all 0.5s ease;
 }
 ul{
-  background: #042331;
+  background: #4d4d4d;
 }
 .sidebar header {
   font-size: 22px;
   color: white;
   line-height: 70px;
   text-align: center;
-  background: #063146;
+  background: #404040;
   user-select: none;
 
 }
@@ -41,7 +41,7 @@ ul{
   box-sizing: border-box;
   border-bottom: 1px solid black;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: #042331;
+  background: #4d4d4d;
   transition: 0.4s;
 }
 ul li:hover a {
@@ -57,7 +57,7 @@ label #btn,
 label #cancel {
   z-index: 20;
   position: absolute;
-  background: #042331;
+  background: #333333;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -75,7 +75,7 @@ label #cancel {
   left: -195px;
   top: 65px;
   font-size: 35px;
-  color: #0a5275;
+  color: #ffffff;
   padding: 4px 9px;
 
 }
