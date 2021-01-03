@@ -264,8 +264,6 @@ function afterClick() {
         }
         document.getElementById("dateInput").style.background = "green";
         let date = inputDate.split("-");
-        //console.log(date[1]); mesiac
-        //console.log(date[2]); den
         let formattedDate = date[1] + date[2];
         let name = searchXML(formattedDate, 3, tag);
         if (name === "Dnes nemá nikto meniny") {

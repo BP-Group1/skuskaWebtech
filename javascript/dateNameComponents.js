@@ -3,25 +3,27 @@ let currentDate=null;
 let hours,minutes,seconds;
 let datetime=null;
 // date
+let xhttp,xmlDoc,x,input,size,SKsviatky,SK,divText,startString;
+
 updateDate()
 document.getElementById("time").innerHTML = datetime;
 
 setInterval(function(){
     updateDate();
     document.getElementById("time").innerHTML = datetime;}, 1000);
-
 // xml reading
-let xhttp,xmlDoc,x,input,size,SKsviatky,SK,divText,startString;
-document.getElementById("nameDay").innerHTML = searchXML((currentDate.getMonth()+1).toString()+currentDate.getDate().toString(),0,"SK");
-//
-//console.log(searchXML("0102",3));
-function getDate(){
-    //input name
-    //TODO
-}
-function getName(){
-    //input date
-    //TODO
+let m=(currentDate.getMonth()+1);
+let d=currentDate.getDate();
+
+document.getElementById("nameDay").innerHTML = searchXML(checkDandM(d,m),0,"SK");
+function checkDandM(d,m){
+    if(m<10){
+        m='0'+m.toString();
+    }
+    if(d<10){
+        d='0'+d.toString();
+    }
+    return m+d;
 }
 function loadXMLDoc(dname)
 {
@@ -154,6 +156,10 @@ function updateSec(currentSec){
 
 function updateDate(){
     currentDate = new Date();
+    let m=(currentDate.getMonth()+1);
+    let d=currentDate.getDate();
+
+    document.getElementById("nameDay").innerHTML = searchXML(checkDandM(d,m),0,"SK");
 
     updateHours(currentDate)
     updateMin(currentDate)
