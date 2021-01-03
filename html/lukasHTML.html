@@ -41,12 +41,12 @@
 
     <!--<img src="../img/lukasObrazok/hraObrazok.jpg" height="783" width="1392"/>-->
     <section id="div2" class="container">
-    <p id="blahozelanie">
-        Blahoželám<br>
-        Úspešne si zvládol tuto hru<br>
-        Tvoj čas je:<br>
-        <span id="vyslednyCas"></span>
-    </p>
+        <p id="blahozelanie">
+            Blahoželám<br>
+            Úspešne si zvládol tuto hru<br>
+            Tvoj čas je:<br>
+            <span id="vyslednyCas"></span>
+        </p>
     </section>
 
 
@@ -66,10 +66,34 @@
 
     <div id="cas"></div>
     <button id="tlacidlo2" onclick=location.reload()>Resetuj hru</button>
-    <button id="tlacidlo1" onclick="otvorAnimaciu()">Povodny obrazok</button>
+    <button id="tlacidlo1" onclick="otvorAnimaciu(1)">Pôvodný obrazok</button>
+    <button id="tlacidlo3" onclick="otvorAnimaciu(2)">Návod</button>
     <div id="animaciaOkno">
-        <img src="../img/lukasObrazok/hraObrazok.jpg" alt="animacia"  id="animacia"/>
-        <div id="close" class="icon" onclick="zatvorAnimaciu()"></div>
+        <img src="../img/lukasObrazok/hraObrazok.jpg" alt="animacia" id="animacia"/>
+        <div id="close" class="icon" onclick="zatvorAnimaciu(1)"></div>
+    </div>
+
+    <div id="navod">
+        <div id="close2" class="icon" onclick="zatvorAnimaciu(2)"></div>
+
+        <div class="container">
+
+            <h2>Návod</h2>
+            <br><br>
+            <p id="navodik">
+
+                Cieľom tejto hry je umiestniť časti robotov na správne miesto v čo najkratšom čase.<br>
+                Časomiera začne kliknutím na niektorú z častí.<br>
+                Hra končí v momente, ako umiestnite poslednú časť na jej pozíciu.<br>
+
+                <br>
+                <span>Resetuj hru </span>- Hra sa zresetuje a začínaš odznova
+                <br>
+                <span>Pôvodný obrázok</span> - Zobrazi sa ti obrázok ktorý máš poskladať
+                <br>
+                Upozornenie hra neobsahuje animáciu!!!
+            </p>
+        </div>
     </div>
     <br><br>
 
@@ -113,7 +137,7 @@
 
 </main>
 
-<nav id="historia" aria-label="breadcrumb" >
+<nav id="historia" aria-label="breadcrumb">
 
 </nav>
 <footer>

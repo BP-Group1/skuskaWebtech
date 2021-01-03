@@ -78,12 +78,25 @@ function gratulacia(){
     document.getElementById("vyslednyCas").innerText = casDisplay;
 }
 
-function otvorAnimaciu(){
-    document.getElementById("animaciaOkno").style.display="block";
+function otvorAnimaciu(cislo){
+    if(cislo==1){
+        document.getElementById("animaciaOkno").style.display="block";
+    }
+    if(cislo==2){
+        document.getElementById("navod").style.display="block";
+    }
+
 
 }
-function zatvorAnimaciu(){
-    document.getElementById("animaciaOkno").style.display = "none";
+function zatvorAnimaciu(cislo){
+    if(cislo==1){
+        document.getElementById("animaciaOkno").style.display="none";
+    }
+    if(cislo==2){
+        document.getElementById("navod").style.display="none";
+    }
 }
+
+
 
 
