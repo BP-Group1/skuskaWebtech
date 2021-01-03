@@ -46,6 +46,9 @@ footer{
     padding-right: 10px;
     font-size: medium;
 }
+#nameDay{
+    padding-bottom: 10px;
+}
 #feastDay{
     display: none;
     float: left;

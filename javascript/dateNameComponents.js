@@ -12,10 +12,6 @@ setInterval(function(){
     updateDate();
     document.getElementById("time").innerHTML = datetime;}, 1000);
 // xml reading
-let m=(currentDate.getMonth()+1);
-let d=currentDate.getDate();
-
-document.getElementById("nameDay").innerHTML = searchXML(checkDandM(d,m),0,"SK");
 function checkDandM(d,m){
     if(m<10){
         m='0'+m.toString();
@@ -165,12 +161,7 @@ function updateDate(){
     updateMin(currentDate)
     updateSec(currentDate)
 
-    datetime = currentDate.getDate() + "/"
-        + (currentDate.getMonth()+1)  + "/"
-        + currentDate.getFullYear() + "  "
-        + hours + ":"
-        + minutes + ":"
-        + seconds;
+    datetime = currentDate.toLocaleString();
     //console.log(datetime);
 }
 /*     time and date   */
