@@ -4,7 +4,7 @@ class MeninyComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div class="container">
-        <div class="row middle">
+        <div class="row middle" id="ndd">
             <p class="h1">Meniny</p>
 
             <div class="column1 col-lg-4">
