@@ -5,7 +5,7 @@
 var pustiCas = 0;
 var spravnePolozene = 0;
 var spustene;
-var casDisplay
+var casDisplay;
 function povolPustenie(ev) {
 
     ev.preventDefault();
